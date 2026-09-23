@@ -11,6 +11,7 @@ import importlib.util
 import inspect
 import json
 import math
+import os
 import shutil
 import struct
 import sys
@@ -182,7 +183,12 @@ def run(config_path, app=None, stage=None, on_step=None):
     }
     owns_app = app is None
     if owns_app:
-        app = SimulationApp({"headless": True, "renderer": "RaytracedLighting"})
+        launch = {"headless": True,
+                  "renderer": os.environ.get("ISAAC_WEB_EXPORTER_RENDERER", "RaytracedLighting")}
+        cpu_threads = os.environ.get("ISAAC_WEB_EXPORTER_KIT_CPU_THREADS")
+        if cpu_threads is not None:
+            launch["limit_cpu_threads"] = max(1, int(cpu_threads))
+        app = SimulationApp(launch)
     try:
         import omni.usd
         import omni.kit.asset_converter as converter

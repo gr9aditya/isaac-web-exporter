@@ -28,16 +28,17 @@ procedure. A bootstrap/adapter may be needed for a project. The source-code
 license remains unselected; no general use license is granted. Private cheese-factory
 and stock Isaac assets are not in the release samples.
 
-The local candidate is **not v1-ready** while E06 and F03 remain blocked. E06
-requires valid first/middle/final Isaac-rendered reference frames. Isolated
-RTX/Xvfb captured a black stock-cube viewport; Replicator returned empty RGB
-after the documented async-render flag, user-settings reset and a separate
-bridge-network retry. The pinned OpenUSD runtime has no CPU imaging plugin.
-Geometry and motion were compared numerically, but that does not replace
-visual comparison. F03 requires responsive progress and real capture/conversion
-cancellation in an interactive Kit session. The panel's child reached capture
-progress, but the parent Kit update probe stalled; only synthetic conversion
-cancellation and independent interrupted capture are verified.
+The local candidate is **not v1-ready** while F03 remains blocked. E06 now
+passes: the owned sort-cell fixture produced nonempty Isaac RTX camera frames
+at three matched browser times via the working headless Kit entrypoint.
+Geometry, framing, orientation and motion phase were reviewed in all six
+images; `runs/v1/E06_VISUAL_REVIEW.md` records the evidence and the substantial
+RTX-versus-WebGL lighting difference. F03 still requires real capture and
+conversion cancellation in an interactive Kit session. The visible panel
+reflected live child capture and conversion progress, but its Kit update loop
+stalled after the Cancel clicks were issued. Button callback, final cancelled
+status and post-cancel usability remain unverified. Synthetic cancellation and
+independent interrupted capture passed. See `runs/v1/f03/README.md`.
 
 The tested local wheel is `dist/isaac_web_exporter-1.0.0-py3-none-any.whl`
 (SHA-256 `cc5a118448ac3fb956b8003a5117a6765c734e04875d1e4d07db6ceaf250ee33`).

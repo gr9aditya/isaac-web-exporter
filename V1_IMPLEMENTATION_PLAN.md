@@ -280,7 +280,7 @@ repeat unrelated passing checks without a reason.
 - [x] **E03** Provide an opt-in optimization preset using measured applicable transformations; retain the source/reference output and prove identities, motion and acceptable appearance survive.
 - [x] **E04** Bundle all decoders/transcoders locally if compression requires them; check their version compatibility and notices. Lossy options are explicit and reported.
 - [x] **E05** Meet the integrated-GPU reference performance gate below on the representative workflow; record actual hardware, graphics backend, browser, viewport and settings.
-- [ ] **E06** Obtain nonempty Isaac reference images for the same fixture at first, middle and final times, match camera/pose, and review geometry, scale, orientation and portable materials against browser images.
+- [x] **E06** Obtain nonempty Isaac reference images for the same fixture at first, middle and final times, match camera/pose, and review geometry, scale, orientation and portable materials against browser images.
 - [x] **E07** Report material approximations by affected object/material, provide visible fallback or strict-mode failure, and document the supported material/texture subset. Do not promise arbitrary RTX equivalence.
 
 ### F — Isaac panel, preview and packaging
