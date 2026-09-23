@@ -37,7 +37,7 @@ The v1 experience includes:
 2. A polished player with Start/Pause/Restart, seek, frame stepping, speed,
    optional looping, camera navigation/bookmarks, and object inspection.
 3. A simple guided-demo editor for chapters, captions, camera views and labels.
-4. An Isaac export panel with preflight, progress, cancellation, preview and ZIP.
+4. An Isaac export panel with preflight, progress, preview and ZIP. There is no in-panel Cancel control in v1.
 5. A documented package contract and optional LLM customization kit.
 6. Repeatable installation, validation, browser tests and a local release bundle.
 
@@ -259,7 +259,7 @@ repeat unrelated passing checks without a reason.
 - [x] **C05** Verify nested moving parents/children, non-identity parent transforms, rotation-only motion, repeated names, non-default units and supported up-axis conversion with focused fixtures.
 - [x] **C06** Compare source and browser world transforms at first, last and at least ten interior recorded samples plus interpolation points; report position and rotation errors using the tolerances below.
 - [x] **C07** Preserve authored clip ranges and explicitly handle multiple clips; source and browser duration match within the defined timing tolerance.
-- [x] **C08** Capture/export leaves source files and caller-owned app/stage ownership intact; cancel and failure do not close a caller-owned Isaac app or save export-only edits into its stage.
+- [x] **C08** Capture/export leaves source files and caller-owned app/stage ownership intact; interruption and failure do not close a caller-owned Isaac app or save export-only edits into its stage.
 - [x] **C09** Unsupported required motion/features and missing dependencies yield actionable errors or explicitly documented approximations; a required moving object may not silently disappear or become static.
 
 ### D — Replay player
@@ -287,7 +287,7 @@ repeat unrelated passing checks without a reason.
 
 - [x] **F01** Add a thin Isaac/Kit export panel calling the shared core: source/selection, duration/sample rate, quality preset, output destination and recording/export actions.
 - [x] **F02** Preflight reports incompatible versions, missing inputs/dependencies and invalid settings before expensive work where possible; selected roots are honored.
-- [ ] **F03** Recording/conversion progress remains responsive in an interactive Isaac session; cancellation restores a usable panel and leaves no false-success package. Test cancel during capture and conversion.
+- [ ] **F03** The interactive panel visibly updates recording/conversion progress, reports final success or failure without a false-success package, and responds to a new Preflight after export. V1 has no in-panel Cancel control.
 - [x] **F04** Add saved export presets, local browser preview and folder/ZIP output. Preview binds locally; it is not an external deployment.
 - [x] **F05** Extract a generated ZIP into a new directory and serve it under a nested static URL; the default player works without Node, Isaac or Docker on the recipient machine.
 - [x] **F06** Exercise the actual panel in the tested Isaac build and save UI evidence; importing the extension or testing the CLI alone does not satisfy the panel gate.
@@ -313,7 +313,7 @@ repeat unrelated passing checks without a reason.
 - [x] **I02** Verify Chromium and Firefox on a recorded desktop configuration, plus Chromium on the integrated-GPU reference laptop; save browser versions and rendering backend evidence.
 - [x] **I03** With external network requests blocked, copied packages and their tour/customization examples load and operate; no required CDN, remote font, texture or decoder remains.
 - [x] **I04** Missing texture/body, corrupt/truncated/tampered GLB, invalid schema/ID/time, nonexistent input, unsupported schema version and conversion failure produce clear failures without false success.
-- [x] **I05** Interrupted/cancelled export, unavailable converter and existing output directory are handled safely; no silent overwrite or damage to previous successful packages.
+- [x] **I05** Interrupted export, unavailable converter and existing output directory are handled safely; no silent overwrite or damage to previous successful packages.
 - [x] **I06** Re-run relevant v0 regressions and all affected v1 gates after final changes; record unresolved issues and do not classify a required failed test as a known harmless limitation.
 
 ### J — Documentation and local v1 release

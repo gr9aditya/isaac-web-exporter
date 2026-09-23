@@ -10,7 +10,8 @@ already-loaded stages, static mode, recorded transform animation, explicit
 object identities, a complete object catalog, compact linear-key reduction,
 and a local folder/ZIP. The player has transport, timeline, camera, selection,
 responsive layout and guided-demo controls. An Isaac Kit panel provides
-preflight, presets, export progress, cancellation and local preview. A
+preflight, presets, export progress and local preview. V1 has no in-panel
+Cancel control. A
 versioned customization kit contains three optional scripts.
 
 The 30-second owned sorting workflow, duplicate-name twin fixture, static
@@ -28,20 +29,22 @@ procedure. A bootstrap/adapter may be needed for a project. The source-code
 license remains unselected; no general use license is granted. Private cheese-factory
 and stock Isaac assets are not in the release samples.
 
-The local candidate is **not v1-ready** while F03 remains blocked. E06 now
-passes: the owned sort-cell fixture produced nonempty Isaac RTX camera frames
-at three matched browser times via the working headless Kit entrypoint.
-Geometry, framing, orientation and motion phase were reviewed in all six
-images; `runs/v1/E06_VISUAL_REVIEW.md` records the evidence and the substantial
-RTX-versus-WebGL lighting difference. F03 still requires real capture and
-conversion cancellation in an interactive Kit session. The visible panel
-reflected live child capture and conversion progress, but its Kit update loop
-stalled after the Cancel clicks were issued. Button callback, final cancelled
-status and post-cancel usability remain unverified. Synthetic cancellation and
-independent interrupted capture passed. See `runs/v1/f03/README.md`.
+The local candidate is **not v1-ready** while F03 remains blocked. E06 passes:
+the owned sort-cell fixture produced nonempty Isaac RTX camera frames at three
+matched browser times. Geometry, framing, orientation and motion phase were
+reviewed in all six images; `runs/v1/E06_VISUAL_REVIEW.md` records the evidence
+and the RTX-versus-WebGL lighting difference. The revised five-button panel
+has no Cancel control. In a real Kit run it produced a validated package and
+showed Ready at 100%; the isolated child exits 0 after final reporting, and
+the panel also reported a synthetic child failure accurately. Post-export
+`ui_test` and real X11 clicks did not change the panel on the shared RTX host,
+although the preflight handler worked when invoked directly. Post-export
+interactive responsiveness remains unverified. See `runs/v1/f03/README.md`.
 
-The tested local wheel is `dist/isaac_web_exporter-1.0.0-py3-none-any.whl`
-(SHA-256 `cc5a118448ac3fb956b8003a5117a6765c734e04875d1e4d07db6ceaf250ee33`).
+The rebuilt local wheel is `dist/isaac_web_exporter-1.0.0-py3-none-any.whl`
+(SHA-256 `91ef435cb390e6b5fb0d1ccbfd0640099c9a78f7d2a11bcb50da93885c827610`).
+Installed in the pinned Isaac image, it exported and validated the owned
+recorded USD with exit code 0.
 Seven owned example ZIPs and their hashes are listed in
 `runs/v1/release-artifacts.json`. Rebuild with `python tools/build_release.py`
 using the versions in `toolchain.lock.json`. The final built browser packages

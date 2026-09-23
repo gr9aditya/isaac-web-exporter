@@ -1,7 +1,7 @@
-"""Thin, responsive Kit panel for the shared Isaac Web Exporter core.
+"""Kit panel for the shared Isaac Web Exporter core.
 
-Exports run in an isolated Isaac Python child process. This lets Kit continue
-to repaint and process cancellation while the capture/converter advances.
+Exports run in an isolated Isaac Python child process. The panel reports
+progress and stops its child if the extension is shut down.
 """
 
 import asyncio
@@ -14,6 +14,7 @@ import sys
 import tempfile
 import threading
 import webbrowser
+import zipfile
 from pathlib import Path
 
 import omni.ext
@@ -61,7 +62,6 @@ class Extension(omni.ext.IExt):
                     ui.Button("Load preset", clicked_fn=self._load_preset)
                 with ui.HStack(height=32):
                     ui.Button("Record + export", clicked_fn=self._start_clicked)
-                    ui.Button("Cancel", clicked_fn=self._cancel_clicked)
                     ui.Button("Preview", clicked_fn=self._preview_clicked)
                 self.status = ui.Label("Ready", word_wrap=True, height=60)
                 self.progress = ui.ProgressBar(height=16)
@@ -177,9 +177,12 @@ class Extension(omni.ext.IExt):
             config_path.write_text(json.dumps(config), encoding="utf-8")
             self._last_output = Path(config["output_dir"])
             self._log_file = (temporary / "export.log").open("w", encoding="utf-8")
+            child_env = os.environ.copy()
+            child_env["ISAAC_WEB_EXPORTER_ISOLATED_CHILD"] = "1"
             self._process = subprocess.Popen(
                 [sys.executable, "-m", "isaac_web_exporter.export", "--config", str(config_path)],
                 stdout=self._log_file, stderr=subprocess.STDOUT,
+                env=child_env,
                 creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
             )
             self.status.text = "Starting isolated Isaac export…"
@@ -205,15 +208,34 @@ class Extension(omni.ext.IExt):
                 await asyncio.sleep(0.1)
             if self._process:
                 report = self._last_output / "report.json"
-                result = json.loads(report.read_text(encoding="utf-8")) if report.is_file() else {}
+                try:
+                    result = json.loads(report.read_text(encoding="utf-8")) if report.is_file() else {}
+                except (OSError, ValueError):
+                    result = {}
                 if self._cancel_requested:
                     self.status.text = "Export cancelled; no completed package was published"
-                elif self._process.returncode == 0 and result.get("status") == "success":
-                    self.status.text = f"Ready: {self._last_output / 'package.zip'}"
-                    self.progress.model.set_value(1.0)
                 else:
-                    self.status.text = ("Export failed: " +
-                                        "; ".join(result.get("errors", []))[:300])
+                    package = self._last_output / "package"
+                    archive = self._last_output / "package.zip"
+                    validated = False
+                    validation_errors = []
+                    if result.get("status") == "success" and archive.is_file():
+                        try:
+                            from isaac_web_exporter.validate_package import check
+                            validation = check(package)
+                            validated = (validation["status"] == "success"
+                                         and zipfile.is_zipfile(archive))
+                            validation_errors = validation.get("errors", [])
+                        except Exception as error:
+                            validation_errors = [str(error)]
+                    if validated:
+                        self.status.text = f"Ready: {archive}"
+                        self.progress.model.set_value(1.0)
+                    else:
+                        errors = result.get("errors", []) or validation_errors
+                        detail = "; ".join(str(error) for error in errors)[:300]
+                        self.status.text = ("Export failed: " + detail if detail else
+                                            f"Export failed (process exit {self._process.returncode})")
         finally:
             if getattr(self, "_log_file", None):
                 self._log_file.close()

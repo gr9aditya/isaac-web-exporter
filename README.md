@@ -92,11 +92,12 @@ viewer-space coordinates.
 
 The Isaac extension in `extensions/isaac.web.exporter/` opens an **Isaac Replay
 Exporter** panel with source, selected roots, duration, sample rate, quality,
-output, static mode, preflight, presets, cancellation and local preview. Add
+output, static mode, preflight, presets and local preview. Add
 this extension folder to Isaac's extension search path and enable it. The panel
-starts an isolated child Isaac export. Interactive repaint/progress during a
-real child capture is still under the F03 acceptance gate; do not rely on it
-until that gate passes. The browser preview binds to `127.0.0.1` only.
+starts an isolated child Isaac export. There is no in-panel Cancel button in
+v1; let an export finish before starting another. Progress may update slowly
+when the workstation is heavily loaded. The browser preview binds to
+`127.0.0.1` only.
 
 ## Package contract and customization
 

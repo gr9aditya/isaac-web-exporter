@@ -23,8 +23,8 @@ try:
         app.update()
     buttons = ui_test.find_all("Isaac Replay Exporter//Frame/**/Button[*]")
     print("UI_TEST_BUTTONS", [item.path for item in buttons], flush=True)
-    if len(buttons) != 6:
-        raise RuntimeError(f"Expected six export panel buttons, found {len(buttons)}")
+    if len(buttons) != 5:
+        raise RuntimeError(f"Expected five export panel buttons, found {len(buttons)}")
     # The first button in the panel's declared row is Preflight. ui_test's
     # wildcard selector prints identical query paths for distinct widgets.
     preflight = buttons[0]

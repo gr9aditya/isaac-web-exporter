@@ -585,7 +585,14 @@ def run(config_path, app=None, stage=None, on_step=None):
         # Isaac's default fast shutdown can terminate the process from close().
         # Pass the status there so a failed export also fails the CLI process.
         if owns_app:
-            app.close(exit_code=0 if report["status"] == "success" else 1)
+            exit_code = 0 if report["status"] == "success" else 1
+            if os.environ.get("ISAAC_WEB_EXPORTER_ISOLATED_CHILD") == "1":
+                # The panel owns this entire child process. Kit shutdown can
+                # abort after a finished export; the OS reclaims its resources.
+                sys.stdout.flush()
+                sys.stderr.flush()
+                os._exit(exit_code)
+            app.close(exit_code=exit_code)
     return report["status"] == "success"
 
 
