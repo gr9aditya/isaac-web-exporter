@@ -1,0 +1,15 @@
+{
+  "bootstrap": "/work/examples/factory_readonly.py",
+  "project_root": "/project",
+  "output_dir": "/work/runs/v0-final-factory-readonly",
+  "viewer_template": "/work/viewer-template-v0",
+  "capture_roots": ["/World/ActiveObject"],
+  "expected_rigid_bodies": 1,
+  "camera": {"position": [4, 3, 5], "target": [0, 0.5, 0]},
+  "duration_seconds": 2,
+  "fps": 30,
+  "simulation_hz": 60,
+  "sample_every_updates": 2,
+  "bootstrap_timeout_seconds": 240,
+  "conversion_timeout_seconds": 300
+}

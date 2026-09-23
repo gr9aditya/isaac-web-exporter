@@ -1,0 +1,17 @@
+{
+  "name": "isaac-browser-checkpoint",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build --base ./",
+    "dev": "vite --host 127.0.0.1"
+  },
+  "dependencies": {
+    "three": "0.185.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "vite": "6.3.0"
+  }
+}

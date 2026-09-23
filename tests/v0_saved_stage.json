@@ -1,0 +1,7 @@
+{
+  "input_usd": "/work/runs/v0-final-falling-box/recorded_scene.usda",
+  "output_dir": "/work/runs/v0-final-saved-stage",
+  "viewer_template": "/work/viewer-template-v0",
+  "capture_roots": [],
+  "conversion_timeout_seconds": 180
+}

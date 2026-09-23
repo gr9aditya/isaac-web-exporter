@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "checkpoint-1",
+  "fixture": "single falling mesh box and floor",
+  "verified": [
+    "Isaac rigid-body positions changed during capture",
+    "Animated GLB contains two meshes and translation/rotation channels",
+    "Start, Pause, Restart, camera orbit and static hosting passed in Edge with SwiftShader",
+    "Browser made no external network requests during the automated test"
+  ],
+  "failed": [
+    "Composing and flattening this Stage Recorder output over the base scene produced a static pose; Asset Converter reported success but emitted no GLB animation"
+  ],
+  "unverified": [
+    "A second unrelated Isaac project",
+    "Arbitrary MDL materials and remote texture dependencies",
+    "Visual fidelity against an Isaac-rendered screenshot"
+  ]
+}

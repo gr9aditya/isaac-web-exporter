@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "checkpoint-1",
+  "mode": "recorded-playback",
+  "asset": "scene.glb",
+  "source": {
+    "application": "Isaac Sim",
+    "version": "6.1.0-rc.26+release.49347.2d230af4.gl",
+    "kitVersion": "110.3.0",
+    "usdVersion": "25.11"
+  },
+  "durationSeconds": 2,
+  "samples": 61,
+  "sourceUpAxis": "Z",
+  "viewerUpAxis": "Y",
+  "metersPerUnit": 1,
+  "defaultCamera": "orbit-fit",
+  "notes": [
+    "This checkpoint GLB uses an explicit pose-sampled USD track from Isaac's rigid-body API.",
+    "The Stage Recorder file is retained separately for diagnostic comparison."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "bootstrap": "/work/examples/stock_franka.py",
+  "output_dir": "/work/runs/stock-franka-final",
+  "viewer_template": "/work/viewer-template-v2",
+  "capture_roots": ["/World/Franka"],
+  "duration_seconds": 2,
+  "fps": 30,
+  "simulation_hz": 60,
+  "sample_every_updates": 2,
+  "conversion_timeout_seconds": 300
+}

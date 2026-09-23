@@ -1,0 +1,19 @@
+# Generated checkpoint artifacts and caches stay outside version control.
+checkpoint1/output/
+checkpoint1/web/node_modules/
+checkpoint1/web/dist/
+checkpoint1/web/public/scene.glb
+checkpoint1/*.png
+checkpoint1/*.json
+checkpoint1/*.zip
+checkpoint2/output/
+checkpoint2/site/
+checkpoint2/*.png
+checkpoint2/*.json
+checkpoint2/*.zip
+**/__pycache__/
+runs/
+viewer-template/
+viewer-template-v2/
+viewer-template-v0/
+third_party/usd-webview-eval/

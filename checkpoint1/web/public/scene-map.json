@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "checkpoint-1",
+  "objects": [
+    { "id": "Floor", "node": "Floor", "label": "Floor", "role": "static" },
+    { "id": "FallingBox", "node": "FallingBox", "label": "Falling box", "role": "animated-rigid-body" }
+  ],
+  "animation": { "clip": "recorded_scene.usda", "durationSeconds": 2 }
+}

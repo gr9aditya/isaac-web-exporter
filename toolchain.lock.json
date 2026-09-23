@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "v0.1",
+  "isaac": {
+    "containerImage": "nvcr.io/nvidia/isaac-sim@sha256:af1d2b4e75d553bfa27beb5a401198654aa8d607f3b7a6749196e9ce253def20",
+    "appVersion": "6.1.0",
+    "detailedBuild": "6.1.0-rc.26+release.49347.2d230af4.gl",
+    "kit": "110.3.0",
+    "openUsd": "25.11",
+    "python": "3.12.13",
+    "assetConverter": "6.0.5"
+  },
+  "player": {
+    "three": "0.185.0",
+    "vite": "6.3.0",
+    "packageLockSha256": "3afc0cd18f838654d37a97caab89e56a7d1d414a23860b8a2a57c14d0baa4e94",
+    "builtJsSha256": "387b84861d44f246561fc255d7221af0679494b2a7b65cf9331323bf0ba6daa4"
+  },
+  "routeComparison": {
+    "usdWebViewCommit": "b050c3731d1854a5980b6b4fe55ec1725dc18f51",
+    "usdWebViewWasmSha256": "0f2f5f978655a7bfc0fe03c9ab2906f4bf9a97626d15384e5812296d3710f5de",
+    "includedInV0Package": false
+  }
+}

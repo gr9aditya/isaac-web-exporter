@@ -1,0 +1,11 @@
+{
+  "output_dir": "/work/runs/v0-final-loaded-stage",
+  "viewer_template": "/work/viewer-template-v0",
+  "capture_roots": ["/World/FallingBox"],
+  "expected_rigid_bodies": 1,
+  "duration_seconds": 2,
+  "fps": 30,
+  "simulation_hz": 60,
+  "sample_every_updates": 2,
+  "conversion_timeout_seconds": 180
+}

@@ -1,0 +1,11 @@
+{
+  "bootstrap": "/work/examples/falling_box.py",
+  "output_dir": "/work/runs/falling-box-final",
+  "viewer_template": "/work/viewer-template-v2",
+  "capture_roots": ["/World"],
+  "expected_rigid_bodies": 1,
+  "duration_seconds": 2,
+  "fps": 30,
+  "simulation_hz": 60,
+  "sample_every_updates": 2
+}
