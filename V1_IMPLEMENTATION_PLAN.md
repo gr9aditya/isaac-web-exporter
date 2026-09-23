@@ -287,7 +287,7 @@ repeat unrelated passing checks without a reason.
 
 - [x] **F01** Add a thin Isaac/Kit export panel calling the shared core: source/selection, duration/sample rate, quality preset, output destination and recording/export actions.
 - [x] **F02** Preflight reports incompatible versions, missing inputs/dependencies and invalid settings before expensive work where possible; selected roots are honored.
-- [ ] **F03** The interactive panel visibly updates recording/conversion progress, reports final success or failure without a false-success package, and responds to a new Preflight after export. V1 has no in-panel Cancel control.
+- [x] **F03** The interactive panel visibly updates recording/conversion progress, reports final success or failure without a false-success package, and responds to a new Preflight after export. V1 has no in-panel Cancel control.
 - [x] **F04** Add saved export presets, local browser preview and folder/ZIP output. Preview binds locally; it is not an external deployment.
 - [x] **F05** Extract a generated ZIP into a new directory and serve it under a nested static URL; the default player works without Node, Isaac or Docker on the recipient machine.
 - [x] **F06** Exercise the actual panel in the tested Isaac build and save UI evidence; importing the extension or testing the CLI alone does not satisfy the panel gate.
@@ -323,7 +323,7 @@ repeat unrelated passing checks without a reason.
 - [x] **J03** Include dependency notices and asset provenance; use owned or expressly redistributable samples in the release bundle. Private factory/uncleared stock assets stay outside it.
 - [x] **J04** Record the project's license status. Do not invent the user's licensing choice; if no source license is selected, label the deliverable local/private and defer public release while preserving dependency obligations.
 - [x] **J05** Build a versioned local v1 exporter/player distribution and example ZIPs; record hashes, toolchain lock, supported Isaac version and exact build commands.
-- [ ] **J06** Finish `V1_ACCEPTANCE.md` with every required ID passing and evidence available; create `V1_RELEASE_NOTES.md` describing supported scope and remaining out-of-scope limits.
+- [x] **J06** Finish `V1_ACCEPTANCE.md` with every required ID passing and evidence available; create `V1_RELEASE_NOTES.md` describing supported scope and remaining out-of-scope limits.
 - [x] **J07** Create coherent local exporter commits, report the final tested code revision and evidence revision, and verify no generated assets/secrets or cheese-factory changes were included.
 - [x] **J08** Open the final representative package locally for review and deliver the summary, commands, artifact locations, hashes, test results and limitations. Do not push or publish.
 

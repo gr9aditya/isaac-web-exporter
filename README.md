@@ -96,8 +96,13 @@ output, static mode, preflight, presets and local preview. Add
 this extension folder to Isaac's extension search path and enable it. The panel
 starts an isolated child Isaac export. There is no in-panel Cancel button in
 v1; let an export finish before starting another. Progress may update slowly
-when the workstation is heavily loaded. The browser preview binds to
-`127.0.0.1` only.
+when the workstation is heavily loaded. On the shared eight-core RTX test host,
+the interactive panel passed its post-export button check with
+`SimulationApp({"headless": False, "renderer": "MinimalRendering",
+"limit_cpu_threads": 2})`; an unrestricted second Kit instance stalled
+while the existing Isaac service consumed the remaining CPU. If you launch a
+second Isaac Python process on a similarly loaded host, limit its Kit worker
+threads or use a less busy host. The browser preview binds to `127.0.0.1` only.
 
 ## Package contract and customization
 

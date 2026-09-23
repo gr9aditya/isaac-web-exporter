@@ -1,8 +1,7 @@
-# Isaac Web Exporter v1 local candidate — release notes
+# Isaac Web Exporter v1 local release notes
 
-**Status: incomplete until every gate in `V1_ACCEPTANCE.md` passes.** This
-document describes the current local candidate. The public source repository
-is not a v1 release or a published factory browser package.
+**Status: ready locally; all 66 acceptance gates pass.** The public source
+repository is not a published v1 release or a published factory browser package.
 
 The candidate exports owned Isaac Sim 6.1 scenes to a self-contained GLB and
 Three.js browser package. It supports bootstrap modules, saved animated USD,
@@ -29,20 +28,22 @@ procedure. A bootstrap/adapter may be needed for a project. The source-code
 license remains unselected; no general use license is granted. Private cheese-factory
 and stock Isaac assets are not in the release samples.
 
-The local candidate is **not v1-ready** while F03 remains blocked. E06 passes:
+E06 passes:
 the owned sort-cell fixture produced nonempty Isaac RTX camera frames at three
 matched browser times. Geometry, framing, orientation and motion phase were
 reviewed in all six images; `runs/v1/E06_VISUAL_REVIEW.md` records the evidence
 and the RTX-versus-WebGL lighting difference. The revised five-button panel
-has no Cancel control. In a real Kit run it produced a validated package and
-showed Ready at 100%; the isolated child exits 0 after final reporting, and
-the panel also reported a synthetic child failure accurately. Post-export
-`ui_test` and real X11 clicks did not change the panel on the shared RTX host,
-although the preflight handler worked when invoked directly. Post-export
-interactive responsiveness remains unverified. See `runs/v1/f03/README.md`.
+has no Cancel control. In two fresh Isaac 6.1 Kit runs it showed conversion
+progress, produced validated packages, reached Ready at 100%, and responded
+to a clicked Preflight after export in 1.95 and 0.89 seconds. A synthetic
+child failure was reported accurately without a package. These passing UI
+runs used `limit_cpu_threads=2` on the shared eight-core RTX host, which also
+runs an existing Isaac service. A separate unrestricted eight-thread run
+stalled after export under that load; normal Kit UI responsiveness on a
+similarly saturated host is not guaranteed. See `runs/v1/f03/README.md`.
 
 The rebuilt local wheel is `dist/isaac_web_exporter-1.0.0-py3-none-any.whl`
-(SHA-256 `91ef435cb390e6b5fb0d1ccbfd0640099c9a78f7d2a11bcb50da93885c827610`).
+(SHA-256 `7ea343692cf949aa46289ed0cf6c2a44cf513d9ac2a8b188d22541824ba0c443`).
 Installed in the pinned Isaac image, it exported and validated the owned
 recorded USD with exit code 0.
 Seven owned example ZIPs and their hashes are listed in

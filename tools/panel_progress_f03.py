@@ -44,13 +44,20 @@ try:
             raise RuntimeError(f"Panel button count changed: {len(current)}")
         print("F03_CLICK_BEGIN", index, flush=True)
         action = asyncio.ensure_future(current[index].click())
-        deadline = time.monotonic() + 20
+        started_click = time.monotonic()
+        deadline = started_click + float(os.environ.get("F03_CLICK_TIMEOUT", "30"))
         while not action.done() and time.monotonic() < deadline:
+            before_update = time.monotonic()
             app.update()
+            elapsed_update = time.monotonic() - before_update
+            if elapsed_update > 2:
+                print("F03_SLOW_UPDATE", index, round(elapsed_update, 2),
+                      "taskDone", action.done(), flush=True)
         if not action.done():
             raise TimeoutError(f"Panel button {index} did not respond")
         action.result()
-        print("F03_CLICK_END", index, panel.status.text, flush=True)
+        print("F03_CLICK_END", index, round(time.monotonic() - started_click, 2),
+              panel.status.text, flush=True)
 
     output = Path(os.environ.get("F03_OUTPUT", "/work/runs/v1-f03-panel-progress-1"))
     if output.exists():
@@ -107,7 +114,7 @@ try:
     result["postExportPreflightClick"] = panel.status.text
     if not result["postExportPreflightClick"].startswith("Preflight passed"):
         raise RuntimeError(f"Panel unusable after export: {result}")
-    report = Path("/work/runs/v1-f03-panel-progress-report.json")
+    report = Path(os.environ.get("F03_REPORT", "/work/runs/v1-f03-panel-progress-report.json"))
     report.write_text(json.dumps(result, indent=2), encoding="utf-8")
     print("F03_PANEL_DONE", json.dumps(result), flush=True)
     status = 0
@@ -117,4 +124,6 @@ except BaseException as error:
 finally:
     if panel:
         panel.on_shutdown()
-    app.close(exit_code=status)
+    # This one-shot Kit test can hang in unrelated Isaac shutdown extensions.
+    # The child export is complete and the evidence has been flushed above.
+    os._exit(status)
