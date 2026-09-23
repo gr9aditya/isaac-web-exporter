@@ -91,7 +91,12 @@ def _check(package):
                 errors.append(f"Missing package schema: {schema.name}")
             else:
                 canonical = Path(__file__).resolve().parent / "schemas" / schema.name
-                if schema.read_bytes() != canonical.read_bytes():
+                try:
+                    packaged_schema = json.loads(schema.read_text(encoding="utf-8"))
+                except (OSError, UnicodeError, json.JSONDecodeError):
+                    errors.append(f"Invalid package schema JSON: {schema.name}")
+                    continue
+                if packaged_schema != json.loads(canonical.read_text(encoding="utf-8")):
                     errors.append(f"Package schema differs from exporter contract: {schema.name}")
         if not any(error.startswith("Missing package schema") for error in errors):
             for name, data in (("manifest", manifest), ("scene-map", scene_map)):
