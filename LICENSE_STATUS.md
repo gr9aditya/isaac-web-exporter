@@ -1,9 +1,10 @@
 # License status
 
-The owner has not selected a source-code license for this repository. It is a
-local/private development deliverable and is not authorized for public release
-by this document. This status does not remove obligations for third-party
-software or source assets.
+The owner has not selected a source-code license for this public repository.
+Publication of the source does not grant a general license to copy, modify,
+or redistribute it. This status does not remove obligations for third-party
+software or source assets. The v1 candidate remains incomplete under
+`V1_ACCEPTANCE.md`; publication here is source sharing, not a v1 release.
 
 The browser package includes the Three.js MIT notice in
 `THIRD_PARTY_LICENSES/three-MIT.txt`. Three.js 0.185.0 is the bundled runtime

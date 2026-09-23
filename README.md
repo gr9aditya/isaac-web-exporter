@@ -8,8 +8,9 @@ hosting and a WebGL browser. Isaac, Docker, an RTX card, a live server, and an
 LLM are not required at playback time. The recording does not run Isaac
 physics, project controllers, sensors, or ROS in the browser.
 
-This repository is local/private while its owner chooses a source license.
-Do not publish the code or exported third-party assets without reviewing rights.
+The source repository is public but has no selected source-code license; see
+[LICENSE_STATUS.md](LICENSE_STATUS.md). Private project assets and their browser
+exports stay in ignored local `runs/` folders and are not included in Git.
 The v1 checklist and test evidence live in [V1_ACCEPTANCE.md](V1_ACCEPTANCE.md).
 
 ## Build and install
@@ -72,6 +73,17 @@ Three source forms share the core exporter:
 - Already-loaded stage: call `run(config_path, app=app, stage=stage,
   on_step=callback)` from Isaac. The caller retains app/stage ownership. See
   `tools/loaded_stage_v1.py`.
+
+The full cheese-factory model run uses a separate, project-specific adapter in
+`tools/factory_capture_entry.py`. It runs the project's camera/model workflow
+under Isaac's headless Kit entrypoint, records robot and active-object poses,
+and authors one fixed-topology visual per item before handing the saved USD to
+the reusable `input_usd` exporter. `tools/factory_capture_experience.py` builds
+guided chapters from the actual run results. This adapter assumes the factory
+project is mounted read-only at `/project`, this repository at `/work`, and the
+factory's model service is available. It is an example of runtime integration,
+not an automatic recorder for arbitrary Isaac applications. Factory scene
+assets and generated packages are excluded from this public repository.
 
 Set `mode: static` for an unanimated scene. `quality_preset: compact` is an
 opt-in, bounded simplification of linear transform keys. The standard preset

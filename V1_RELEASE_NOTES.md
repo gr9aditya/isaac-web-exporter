@@ -1,8 +1,8 @@
 # Isaac Web Exporter v1 local candidate — release notes
 
 **Status: incomplete until every gate in `V1_ACCEPTANCE.md` passes.** This
-document describes the current local candidate and does not authorize push,
-publication, or deployment.
+document describes the current local candidate. The public source repository
+is not a v1 release or a published factory browser package.
 
 The candidate exports owned Isaac Sim 6.1 scenes to a self-contained GLB and
 Three.js browser package. It supports bootstrap modules, saved animated USD,
@@ -25,7 +25,7 @@ The browser is a recording viewer, not an Isaac runtime. It does not support
 deformables, particles, spawn/despawn, live physics/controllers, arbitrary
 MDL/RTX appearance, or automatic replication of every project's launch
 procedure. A bootstrap/adapter may be needed for a project. The source-code
-license remains unselected; local/private use only. Private cheese-factory
+license remains unselected; no general use license is granted. Private cheese-factory
 and stock Isaac assets are not in the release samples.
 
 The local candidate is **not v1-ready** while E06 and F03 remain blocked. E06
