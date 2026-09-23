@@ -28,9 +28,23 @@ procedure. A bootstrap/adapter may be needed for a project. The source-code
 license remains unselected; local/private use only. Private cheese-factory
 and stock Isaac assets are not in the release samples.
 
-The Isaac reference-image gate is currently open: isolated RTX/Xvfb captures
-showed a black viewport, Replicator RGB was empty with a renderer-advance
-error even after the documented async-render flag and user-settings reset, and
-the pinned OpenUSD runtime has no CPU imaging plugin. Geometry and motion were
-independently compared numerically; those tests do not substitute for the
-required first/middle/final Isaac visual comparison.
+The local candidate is **not v1-ready** while E06 and F03 remain blocked. E06
+requires valid first/middle/final Isaac-rendered reference frames. Isolated
+RTX/Xvfb captured a black stock-cube viewport; Replicator returned empty RGB
+after the documented async-render flag, user-settings reset and a separate
+bridge-network retry. The pinned OpenUSD runtime has no CPU imaging plugin.
+Geometry and motion were compared numerically, but that does not replace
+visual comparison. F03 requires responsive progress and real capture/conversion
+cancellation in an interactive Kit session. The panel's child reached capture
+progress, but the parent Kit update probe stalled; only synthetic conversion
+cancellation and independent interrupted capture are verified.
+
+The tested local wheel is `dist/isaac_web_exporter-1.0.0-py3-none-any.whl`
+(SHA-256 `cc5a118448ac3fb956b8003a5117a6765c734e04875d1e4d07db6ceaf250ee33`).
+Seven owned example ZIPs and their hashes are listed in
+`runs/v1/release-artifacts.json`. Rebuild with `python tools/build_release.py`
+using the versions in `toolchain.lock.json`. The final built browser packages
+passed the eight-case Edge suite, Firefox 156 playback, 480/1280 desktop
+layouts and 19 malformed-package checks. A Git-archived clean checkout built
+and validated independently; that walkthrough is agent-run, not outside
+novice-user feedback.

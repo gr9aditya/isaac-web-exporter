@@ -89,6 +89,8 @@ cases = {
             load_json(package, "manifest.json")),
     "mutated_schema_contract": lambda package: (package / "schemas" /
         "manifest.v1.schema.json").write_text("{}", encoding="utf-8"),
+    "malformed_schema_json": lambda package: (package / "schemas" /
+        "manifest.v1.schema.json").write_text("{", encoding="utf-8"),
     "invalid_camera_transition": lambda package: (lambda data: (
         data["chapters"][0].__setitem__("transitionSeconds", -2),
         save_json(package, "experience.json", data)))(load_json(package, "experience.json")),

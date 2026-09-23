@@ -71,7 +71,7 @@ Three source forms share the core exporter:
   the exporter preserves authored time samples rather than running physics.
 - Already-loaded stage: call `run(config_path, app=app, stage=stage,
   on_step=callback)` from Isaac. The caller retains app/stage ownership. See
-  `tests/loaded_stage_entry.py`.
+  `tools/loaded_stage_v1.py`.
 
 Set `mode: static` for an unanimated scene. `quality_preset: compact` is an
 opt-in, bounded simplification of linear transform keys. The standard preset
@@ -82,8 +82,9 @@ The Isaac extension in `extensions/isaac.web.exporter/` opens an **Isaac Replay
 Exporter** panel with source, selected roots, duration, sample rate, quality,
 output, static mode, preflight, presets, cancellation and local preview. Add
 this extension folder to Isaac's extension search path and enable it. The panel
-starts an isolated child Isaac export so Kit can continue repainting while it
-records. The browser preview binds to `127.0.0.1` only.
+starts an isolated child Isaac export. Interactive repaint/progress during a
+real child capture is still under the F03 acceptance gate; do not rely on it
+until that gate passes. The browser preview binds to `127.0.0.1` only.
 
 ## Package contract and customization
 

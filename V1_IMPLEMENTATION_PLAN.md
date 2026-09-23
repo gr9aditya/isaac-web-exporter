@@ -237,7 +237,7 @@ repeat unrelated passing checks without a reason.
 - [x] **A02** Verify an isolated, compatible Isaac export environment and required browser/hardware access; record versions, ownership and read-only fixture mounts.
 - [x] **A03** Move the maintained player out of `checkpoint1/` into the production layout; update scripts/imports/ignore rules and keep historical evidence intact.
 - [x] **A04** Provide a single documented player build and exporter packaging flow using locked dependencies; include the prebuilt player in the local exporter distribution.
-- [ ] **A05** A fresh checkout plus documented dependencies can build and run without ignored artifacts, ad hoc copies from prior runs, or hardcoded workstation paths.
+- [x] **A05** A fresh checkout plus documented dependencies can build and run without ignored artifacts, ad hoc copies from prior runs, or hardcoded workstation paths.
 - [x] **A06** Install the built exporter distribution into a clean compatible environment; export and validate an owned sample without requiring the exporter user to build frontend assets.
 
 ### B — Object identity, schemas and package integrity
@@ -314,18 +314,18 @@ repeat unrelated passing checks without a reason.
 - [x] **I03** With external network requests blocked, copied packages and their tour/customization examples load and operate; no required CDN, remote font, texture or decoder remains.
 - [x] **I04** Missing texture/body, corrupt/truncated/tampered GLB, invalid schema/ID/time, nonexistent input, unsupported schema version and conversion failure produce clear failures without false success.
 - [x] **I05** Interrupted/cancelled export, unavailable converter and existing output directory are handled safely; no silent overwrite or damage to previous successful packages.
-- [ ] **I06** Re-run relevant v0 regressions and all affected v1 gates after final changes; record unresolved issues and do not classify a required failed test as a known harmless limitation.
+- [x] **I06** Re-run relevant v0 regressions and all affected v1 gates after final changes; record unresolved issues and do not classify a required failed test as a known harmless limitation.
 
 ### J — Documentation and local v1 release
 
 - [x] **J01** Write installation, one complete export workflow, panel usage, hosting, customization, troubleshooting and supported-feature documentation; commands and paths match the release.
-- [ ] **J02** Perform a clean-room walkthrough using only the documented steps in a fresh compatible environment. Record any fixes; distinguish this agent-run test from external novice-user feedback.
+- [x] **J02** Perform a clean-room walkthrough using only the documented steps in a fresh compatible environment. Record any fixes; distinguish this agent-run test from external novice-user feedback.
 - [x] **J03** Include dependency notices and asset provenance; use owned or expressly redistributable samples in the release bundle. Private factory/uncleared stock assets stay outside it.
 - [x] **J04** Record the project's license status. Do not invent the user's licensing choice; if no source license is selected, label the deliverable local/private and defer public release while preserving dependency obligations.
-- [ ] **J05** Build a versioned local v1 exporter/player distribution and example ZIPs; record hashes, toolchain lock, supported Isaac version and exact build commands.
+- [x] **J05** Build a versioned local v1 exporter/player distribution and example ZIPs; record hashes, toolchain lock, supported Isaac version and exact build commands.
 - [ ] **J06** Finish `V1_ACCEPTANCE.md` with every required ID passing and evidence available; create `V1_RELEASE_NOTES.md` describing supported scope and remaining out-of-scope limits.
-- [ ] **J07** Create coherent local exporter commits, report the final tested code revision and evidence revision, and verify no generated assets/secrets or cheese-factory changes were included.
-- [ ] **J08** Open the final representative package locally for review and deliver the summary, commands, artifact locations, hashes, test results and limitations. Do not push or publish.
+- [x] **J07** Create coherent local exporter commits, report the final tested code revision and evidence revision, and verify no generated assets/secrets or cheese-factory changes were included.
+- [x] **J08** Open the final representative package locally for review and deliver the summary, commands, artifact locations, hashes, test results and limitations. Do not push or publish.
 
 ## 6. Quantitative acceptance details
 
