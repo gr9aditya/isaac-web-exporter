@@ -1,122 +1,127 @@
-# Isaac browser exporter v0
+# Isaac Web Exporter v1 (local candidate)
 
-Export a fixed-topology Isaac Sim scene and recorded rigid-body motion to a
-self-hostable browser package. The package contains an animated GLB, a local
-Three.js player, Start/Pause/Restart controls, orbit/pan/zoom navigation, a
-manifest, a scene map, an LLM handoff guide, a compatibility report, and the
-player license notice.
-End users need ordinary static HTTP hosting and WebGL; they do not need Isaac
-Sim, Docker, a live GPU server, or an RTX GPU. Playback does not run physics,
-controllers, sensors, or ROS.
+Export an Isaac Sim stage and its recorded transform motion to a self-hostable
+browser package. The bundled Three.js player provides Start/Pause/Restart,
+scrubbing, frame stepping, speed and loop controls, camera navigation, object
+inspection, and a guided-demo editor. The recipient needs only static HTTP
+hosting and a WebGL browser. Isaac, Docker, an RTX card, a live server, and an
+LLM are not required at playback time. The recording does not run Isaac
+physics, project controllers, sensors, or ROS in the browser.
 
-This v0 is a **scoped recorded-playback exporter**, not a universal converter
-for every Isaac schema or material. The format decision and evidence are in
-`ROUTE_DECISION.md` and `V0_ACCEPTANCE.md`. Outputs in `runs/` are local test
-artifacts excluded from Git.
+This repository is local/private while its owner chooses a source license.
+Do not publish the code or exported third-party assets without reviewing rights.
+The v1 checklist and test evidence live in [V1_ACCEPTANCE.md](V1_ACCEPTANCE.md).
 
-## Build the local player template
+## Build and install
 
-Node.js and npm are needed only to build the player, not by the end user. From
-this repository:
+The tested exporter runs in Isaac Sim 6.1 (image digest and tool versions are
+in [toolchain.lock.json](toolchain.lock.json)). Build tools require Python 3.12+
+and Node/npm; recipients of a built package need neither Node nor Isaac.
 
 ```bash
-cd checkpoint1/web
-npm ci
-npm run build
-cd ../..
-mkdir -p viewer-template-v0/THIRD_PARTY_LICENSES
-cp -r checkpoint1/web/dist/. viewer-template-v0/
-cp checkpoint1/web/public/THIRD_PARTY_LICENSES/three-MIT.txt viewer-template-v0/THIRD_PARTY_LICENSES/
+python tools/build_release.py
 ```
 
-The source and lockfile pin Three.js 0.185.0 and Vite 6.3.0. The build emits
-relative asset URLs, so a generated package can be hosted under a URL subpath.
-`toolchain.lock.json` records the tested Isaac image and artifact hashes.
-
-## Run the exporter in Isaac
-
-Use the tested Isaac 6.1 image digest in `toolchain.lock.json`, mount this repo
-as `/work`, and run with Isaac's `python.sh`. The config supplies paths *inside*
-the container. Choose a fresh `output_dir`; the exporter refuses to overwrite an
-existing directory.
+The command stages a clean source copy, runs `npm ci` using
+`web/player/package-lock.json`, builds Vite with relative URLs, and creates a
+wheel under `dist/`. It checks for exactly one generated JavaScript and CSS
+asset. The wheel includes the player, schemas, notices, and customization kit.
+For editing the player locally, `python tools/build_player.py` also refreshes
+the checked-in bundled template. Install the wheel into a compatible Isaac
+Python environment; the exporter user does **not** need to build JavaScript:
 
 ```bash
-PYTHONPATH=/work/src /isaac-sim/python.sh -m isaac_web_exporter.export \
-  --config /work/tests/v0_falling_box.json
+/isaac-sim/python.sh -m pip install --no-deps /path/to/isaac_web_exporter-1.0.0-py3-none-any.whl
 ```
 
-The three supported input forms are:
+The remote Docker image in the lockfile is a reproducible development option,
+not a runtime requirement for browser recipients. Do not install a separate
+OpenUSD Python distribution into Isaac's environment.
 
-- **Project bootstrap:** `bootstrap` names a Python file defining
-  `build(stage, app, config)`. It constructs/loads the scene and may return
-  `{"on_step": callback}` to drive each simulation update. `capture_roots`,
-  `duration_seconds`, `simulation_hz`, `fps`, and `sample_every_updates` control
-  capture. `examples/falling_box.py`, `examples/inspection_cell.py`, and
-  `examples/factory_readonly.py` show separate adapters using the same exporter.
-- **Saved USD:** `input_usd` opens a stage whose animation is already authored.
-  Set `capture_roots` to `[]`; this mode preserves time samples and does not
-  start physics capture. `tests/v0_saved_stage.json` is a tested example.
-- **Already-loaded stage:** code running inside Isaac can call
-  `run(config_path, app=app, stage=stage, on_step=callback)`. The caller owns the
-  supplied app and stage; the exporter does not close them. This mode exports
-  an independent stage copy and leaves the caller's stage metadata alone.
-  `tests/loaded_stage_entry.py` is a tested example.
+## Export an owned example
 
-The exporter discovers `UsdPhysics.RigidBodyAPI` prims under selected roots,
-samples world poses, writes explicit timed transforms to an export copy,
-tessellates analytic cubes there, checks source dependencies, and converts with
-the installed Isaac Asset Converter. It rejects missing required visual assets,
-missing animation/meshes, absent moving-object channels, external GLB resources,
-implausible transforms, and duplicate captured leaf names. Warnings identify
-material types that still need visual inspection. An optional config `camera`
-contains viewer-space `position` and `target` arrays; use it when a large ground
-plane defeats automatic framing.
-
-## Serve and validate the result
-
-Successful output contains `package/`, `base.usda`, `recorded_scene.usda`,
-`scene.glb`, and `report.json`. Copy only `package/` to ordinary static hosting,
-or test locally:
+Copy `tests/v1_sort_cell_guided.json` and change `bootstrap`, `experience` and
+`output_dir` to paths visible inside your Isaac environment. The example
+bootstrap `examples/sort_cell_workflow.py` authors a 30-second sorting scene;
+its motion is scripted USD transform animation, not live physics. Its own
+`fixture_common.py` must be alongside it. Use a **new** output directory—the
+exporter refuses overwrite.
 
 ```bash
+PYTHONPATH=/path/to/repo/src /isaac-sim/python.sh -m isaac_web_exporter.export \
+  --config /path/to/repo/tests/v1_sort_cell_guided.json
+python src/isaac_web_exporter/validate_package.py /path/to/output/package
 python -m http.server 8000 --directory /path/to/output/package
 ```
 
-Open `http://localhost:8000/`; opening `index.html` using `file://` is not
-supported. The package is independently validated with standard Python:
+Open `http://127.0.0.1:8000/`. You may instead install the wheel and use
+`isaac-web-package-check /path/to/output/package`. The output also contains
+`package.zip`, the disposable conversion stage, an unoptimized GLB when using
+`quality_preset: compact`, a progress file, and an exporter report. Only
+`package/` or its ZIP is needed by a recipient. Serve with HTTP, including
+from a nested URL; direct `file://` loading is unsupported.
 
-```bash
-python src/isaac_web_exporter/validate_package.py /path/to/output/package
-```
+Three source forms share the core exporter:
 
-The validator checks required files, HTML-relative resources, an animated
-self-contained GLB, scene-map nodes, the successful compatibility report, and
-the asset SHA-256 in the manifest. The end user's browser makes no external
-runtime requests in the tested fixtures.
+- `bootstrap`: a Python module with `build(stage, app, config)`. It may return
+  `{"on_step": callback}` to drive physics/controller updates. Capture is
+  scoped to `capture_roots` and configured by duration, simulation rate,
+  sample interval and FPS.
+- `input_usd`: a saved USD with authored animation. Use `capture_roots: []`;
+  the exporter preserves authored time samples rather than running physics.
+- Already-loaded stage: call `run(config_path, app=app, stage=stage,
+  on_step=callback)` from Isaac. The caller retains app/stage ownership. See
+  `tests/loaded_stage_entry.py`.
 
-## Supported scope and limits
+Set `mode: static` for an unanimated scene. `quality_preset: compact` is an
+opt-in, bounded simplification of linear transform keys. The standard preset
+keeps all converter output keys. `camera` and `camera_bookmarks` use Y-up
+viewer-space coordinates.
 
-Verified inputs include two independent self-authored scenes, stock Franka
-link motion, an authored saved USD, an already-loaded stage, and a read-only
-probe of the real cheese-factory scene. The factory package records only a
-two-second conveyor object movement, with static layout and Franka; it does
-not claim to reproduce classification or pick-and-place. See
-`FACTORY_PROBE_REPORT.md`.
+The Isaac extension in `extensions/isaac.web.exporter/` opens an **Isaac Replay
+Exporter** panel with source, selected roots, duration, sample rate, quality,
+output, static mode, preflight, presets, cancellation and local preview. Add
+this extension folder to Isaac's extension search path and enable it. The panel
+starts an isolated child Isaac export so Kit can continue repainting while it
+records. The browser preview binds to `127.0.0.1` only.
 
-The v0 assumes fixed topology and object population, static material binding,
-and rigid/link transform motion or existing USD transform animation. Animated
-visibility, spawn/despawn, deformables, particles, ROS, live controllers, and
-arbitrary MDL/RTX appearance are outside this scope. Native USD instances,
-complex moving-parent hierarchies, and unusual textures need project-specific
-checks. The factory example reached about 8 fps on a software renderer; large
-scenes may need optimization. Browser results are not a pixel-accurate Isaac RTX
-render.
+## Package contract and customization
 
-The player includes Three.js's MIT notice. Exported geometry and textures may
-have separate rights; conversion does not grant redistribution permission.
-Stock Franka and cheese-factory packages remain local technical artifacts and
-were not published. Review source-asset terms before distributing a package.
+`scene.glb` is authoritative for geometry and recorded animation;
+`manifest.json`, `scene-map.json`, `compatibility-report.json` and
+`experience.json` are versioned metadata. The package ships readable schemas
+and `LLM-HANDOFF.md`, plus three optional customization examples under
+`customization/`. The default player works without an LLM. The public
+`window.isaacReplay` API is documented in the package's customization guide.
+Download an edited `experience.json` from the browser editor and replace that
+file in the package to share a guided tour without re-exporting the GLB.
 
-`IMPLEMENTATION_PLAN.md` records the original plan; `ROUTE_DECISION.md` explains
-the tested deviation to GLB. `V0_ACCEPTANCE.md` maps its acceptance gates to
-measured evidence and remaining limits.
+The v1 loader accepts unchanged `alpha-0.1` v0 packages for basic playback.
+Their catalog covers only v0 captured objects and they have no packaged tour
+metadata. Unknown schema versions fail. The offline validator checks relative
+HTML resources, GLB integrity/hash, identities, sample times, schemas and
+presentation references. Run it after customizing a package.
+
+## Supported scope and troubleshooting
+
+Supported motion is fixed-topology rigid/link transforms and authored USD
+transform animation with static material bindings. Non-transform animated
+properties, spawn/despawn, deformables, particles, animated material binding,
+and arbitrary RTX/MDL appearance are outside v1. Missing visual dependencies,
+required moving objects omitted by conversion, absent meshes/animation in
+recorded mode, external GLB URLs and invalid metadata fail export/validation.
+The compatibility report records approximations. A large scene may render
+slowly on integrated graphics; the performance result in the acceptance file
+applies to the owned 30-second sorting scene, not every factory.
+
+If the panel preflight fails, check that the source path exists inside the
+Isaac environment, that the output path is new, and that the running app is
+Isaac 6.1. If conversion fails, inspect `report.json` and check that required
+textures and referenced USD layers resolve. If a browser shows **Load failed**,
+run the package validator, use HTTP rather than `file://`, check the browser
+console, and verify all files from the ZIP were copied. A package with a
+different schema version requires an explicit migration.
+
+See [ROUTE_DECISION.md](ROUTE_DECISION.md) for why v1 uses GLB/Three.js rather
+than USDZ/Web View, [V0_ACCEPTANCE.md](V0_ACCEPTANCE.md) for the earlier v0,
+and [V1_IMPLEMENTATION_PLAN.md](V1_IMPLEMENTATION_PLAN.md) for all v1 gates.

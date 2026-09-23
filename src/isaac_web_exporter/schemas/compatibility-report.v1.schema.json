@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/isaac-web-exporter/compatibility-report.v1.schema.json",
+  "title": "Isaac Replay compatibility report v1.0",
+  "type": "object",
+  "required": ["schemaVersion", "status", "warnings", "errors", "converter", "glb"],
+  "properties": {
+    "schemaVersion": {"const": "v1.0"},
+    "status": {"enum": ["started", "success", "failed", "cancelled"]},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "errors": {"type": "array", "items": {"type": "string"}},
+    "converter": {"type": "object"},
+    "glb": {"type": "object"}
+  }
+}

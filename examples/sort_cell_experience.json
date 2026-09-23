@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "v1.0",
+  "chapters": [
+    {
+      "id": "arrival",
+      "clipIndex": 0,
+      "startSeconds": 0,
+      "title": "Parts arrive",
+      "caption": "Two recorded workpieces approach the inspection area on the conveyor.",
+      "objectId": "/World/Products/PartA",
+      "label": "Part A",
+      "camera": {"position": [5, 4, 7], "target": [-1, 0.5, 0.2]}
+    },
+    {
+      "id": "inspection",
+      "clipIndex": 0,
+      "startSeconds": 10,
+      "title": "Inspection",
+      "caption": "Part A reaches the inspection station. This demonstration uses authored motion; it does not run a classifier in the browser.",
+      "objectId": "/World/Products/PartA",
+      "label": "Inspected part",
+      "camera": {"position": [3, 3, 5], "target": [-0.8, 0.8, 0.7]}
+    },
+    {
+      "id": "transfer",
+      "clipIndex": 0,
+      "startSeconds": 20,
+      "title": "Transfer",
+      "caption": "The arm and Part A move toward the output bin in the recorded clip.",
+      "objectId": "/World/Sorter/Shoulder/Elbow/Wrist/Gripper",
+      "label": "Robot gripper",
+      "camera": {"position": [5, 4, 6], "target": [1, 1, 0]}
+    },
+    {
+      "id": "result",
+      "clipIndex": 0,
+      "startSeconds": 26,
+      "title": "Recorded result",
+      "caption": "Part A rests in the output area while the arm returns to its home pose.",
+      "objectId": "/World/Products/PartA",
+      "label": "Part A in output"
+    }
+  ]
+}

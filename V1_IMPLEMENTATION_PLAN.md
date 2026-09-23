@@ -1,7 +1,7 @@
 # Isaac Web Exporter v1 — implementation brief and completion checklist
 
 Date: 2026-09-23  
-Status: ready to hand to an implementation agent; v1 is not yet implemented.  
+Status: implementation in progress; see `V1_ACCEPTANCE.md` for verified gates.
 Starting point: working, user-reviewed v0 in this independent repository.
 
 ## Copy this instruction to the implementation agent
@@ -233,95 +233,95 @@ repeat unrelated passing checks without a reason.
 
 ### A — Baseline, installation and build
 
-- [ ] **A01** Inspect repository instructions, Git state and existing source; preserve user work and record the actual v0 baseline in a local commit when possible.
-- [ ] **A02** Verify an isolated, compatible Isaac export environment and required browser/hardware access; record versions, ownership and read-only fixture mounts.
-- [ ] **A03** Move the maintained player out of `checkpoint1/` into the production layout; update scripts/imports/ignore rules and keep historical evidence intact.
-- [ ] **A04** Provide a single documented player build and exporter packaging flow using locked dependencies; include the prebuilt player in the local exporter distribution.
+- [x] **A01** Inspect repository instructions, Git state and existing source; preserve user work and record the actual v0 baseline in a local commit when possible.
+- [x] **A02** Verify an isolated, compatible Isaac export environment and required browser/hardware access; record versions, ownership and read-only fixture mounts.
+- [x] **A03** Move the maintained player out of `checkpoint1/` into the production layout; update scripts/imports/ignore rules and keep historical evidence intact.
+- [x] **A04** Provide a single documented player build and exporter packaging flow using locked dependencies; include the prebuilt player in the local exporter distribution.
 - [ ] **A05** A fresh checkout plus documented dependencies can build and run without ignored artifacts, ad hoc copies from prior runs, or hardcoded workstation paths.
-- [ ] **A06** Install the built exporter distribution into a clean compatible environment; export and validate an owned sample without requiring the exporter user to build frontend assets.
+- [x] **A06** Install the built exporter distribution into a clean compatible environment; export and validate an owned sample without requiring the exporter user to build frontend assets.
 
 ### B — Object identity, schemas and package integrity
 
-- [ ] **B01** Add versioned manifest, object-catalog, report and experience schemas with clear validation messages and a documented compatibility policy.
-- [ ] **B02** Map source objects to GLB nodes without leaf-name uniqueness; two branches with identically named objects remain separately selectable and correctly animated.
-- [ ] **B03** Include supported static and moving selectable objects, parent relationships, display names and one-to-many conversion mappings in the catalog.
-- [ ] **B04** Prove identity stability across two exports of unchanged source structure and across enabled optimization passes; invalid mappings fail validation.
-- [ ] **B05** Record mode, units/axis conventions, clip timing/sample times, versions, hashes and conversion approximations without exposing private host paths or credentials in the shared package.
-- [ ] **B06** Extend validation to schemas, package-contained paths, local resources, identities, animation/static mode and presentation references; malformed input produces a structured failure.
-- [ ] **B07** Load an unchanged v0 package in the v1 player and document which newer features are unavailable without its new metadata.
+- [x] **B01** Add versioned manifest, object-catalog, report and experience schemas with clear validation messages and a documented compatibility policy.
+- [x] **B02** Map source objects to GLB nodes without leaf-name uniqueness; two branches with identically named objects remain separately selectable and correctly animated.
+- [x] **B03** Include supported static and moving selectable objects, parent relationships, display names and one-to-many conversion mappings in the catalog.
+- [x] **B04** Prove identity stability across two exports of unchanged source structure and across enabled optimization passes; invalid mappings fail validation.
+- [x] **B05** Record mode, units/axis conventions, clip timing/sample times, versions, hashes and conversion approximations without exposing private host paths or credentials in the shared package.
+- [x] **B06** Extend validation to schemas, package-contained paths, local resources, identities, animation/static mode and presentation references; malformed input produces a structured failure.
+- [x] **B07** Load an unchanged v0 package in the v1 player and document which newer features are unavailable without its new metadata.
 
 ### C — Capture correctness and representative projects
 
-- [ ] **C01** Preserve bootstrap, saved animated USD and already-loaded stage inputs using the same reusable core; retain documented controller callbacks.
-- [ ] **C02** Add an explicit static scene mode that exports and validates successfully without fabricated animation.
-- [ ] **C03** Export an owned 30–60 second articulated workflow with multiple moving objects and a visible task sequence; a scripted joint trajectory is acceptable when accurately described.
-- [ ] **C04** Export a second unrelated project through configuration/adapter code without changing the exporter core; it exercises different hierarchy and motion characteristics.
-- [ ] **C05** Verify nested moving parents/children, non-identity parent transforms, rotation-only motion, repeated names, non-default units and supported up-axis conversion with focused fixtures.
-- [ ] **C06** Compare source and browser world transforms at first, last and at least ten interior recorded samples plus interpolation points; report position and rotation errors using the tolerances below.
-- [ ] **C07** Preserve authored clip ranges and explicitly handle multiple clips; source and browser duration match within the defined timing tolerance.
-- [ ] **C08** Capture/export leaves source files and caller-owned app/stage ownership intact; cancel and failure do not close a caller-owned Isaac app or save export-only edits into its stage.
-- [ ] **C09** Unsupported required motion/features and missing dependencies yield actionable errors or explicitly documented approximations; a required moving object may not silently disappear or become static.
+- [x] **C01** Preserve bootstrap, saved animated USD and already-loaded stage inputs using the same reusable core; retain documented controller callbacks.
+- [x] **C02** Add an explicit static scene mode that exports and validates successfully without fabricated animation.
+- [x] **C03** Export an owned 30–60 second articulated workflow with multiple moving objects and a visible task sequence; a scripted joint trajectory is acceptable when accurately described.
+- [x] **C04** Export a second unrelated project through configuration/adapter code without changing the exporter core; it exercises different hierarchy and motion characteristics.
+- [x] **C05** Verify nested moving parents/children, non-identity parent transforms, rotation-only motion, repeated names, non-default units and supported up-axis conversion with focused fixtures.
+- [x] **C06** Compare source and browser world transforms at first, last and at least ten interior recorded samples plus interpolation points; report position and rotation errors using the tolerances below.
+- [x] **C07** Preserve authored clip ranges and explicitly handle multiple clips; source and browser duration match within the defined timing tolerance.
+- [x] **C08** Capture/export leaves source files and caller-owned app/stage ownership intact; cancel and failure do not close a caller-owned Isaac app or save export-only edits into its stage.
+- [x] **C09** Unsupported required motion/features and missing dependencies yield actionable errors or explicitly documented approximations; a required moving object may not silently disappear or become static.
 
 ### D — Replay player
 
-- [ ] **D01** Start, Pause, Restart and initial/end states follow the playback contract, including restart after reaching the end and camera independence.
-- [ ] **D02** Add a scrubber, elapsed/duration display and seeking that works while paused/playing, after completion, and at every supported playback speed.
-- [ ] **D03** Add backward/forward sample stepping, 0.25x/0.5x/1x/2x speed and optional looping; test boundary times and state transitions.
-- [ ] **D04** Keep orbit/pan/zoom, add reset view and camera bookmarks, and avoid unusable framing caused by oversized floors/helpers.
-- [ ] **D05** Add a searchable object tree/catalog and click selection, highlight, isolate and focus; repeated names and moving descendants target the correct objects.
-- [ ] **D06** Provide clip selection when needed, static-mode UI and readable compatibility information, with the recorded-playback distinction visible.
-- [ ] **D07** Add loading/progress/error states, keyboard operation, clear focus indicators and usable layouts at 480px and 1280px widths; verify visible scene and controls in both.
-- [ ] **D08** Encode/restore clip, time and selection in a URL fragment for an already-hosted package; validate malformed references and avoid automatic external requests.
+- [x] **D01** Start, Pause, Restart and initial/end states follow the playback contract, including restart after reaching the end and camera independence.
+- [x] **D02** Add a scrubber, elapsed/duration display and seeking that works while paused/playing, after completion, and at every supported playback speed.
+- [x] **D03** Add backward/forward sample stepping, 0.25x/0.5x/1x/2x speed and optional looping; test boundary times and state transitions.
+- [x] **D04** Keep orbit/pan/zoom, add reset view and camera bookmarks, and avoid unusable framing caused by oversized floors/helpers.
+- [x] **D05** Add a searchable object tree/catalog and click selection, highlight, isolate and focus; repeated names and moving descendants target the correct objects.
+- [x] **D06** Provide clip selection when needed, static-mode UI and readable compatibility information, with the recorded-playback distinction visible.
+- [x] **D07** Add loading/progress/error states, keyboard operation, clear focus indicators and usable layouts at 480px and 1280px widths; verify visible scene and controls in both.
+- [x] **D08** Encode/restore clip, time and selection in a URL fragment for an already-hosted package; validate malformed references and avoid automatic external requests.
 
 ### E — Performance and visual fidelity
 
-- [ ] **E01** Establish repeatable unoptimized baselines: package size, cold load, draw calls, triangles, texture sizes, frame-time distribution and available memory estimates; label unavailable metrics honestly.
-- [ ] **E02** Profile the representative workflow and larger scene before optimizing; record the actual limiting resource rather than assuming file size explains frame rate.
-- [ ] **E03** Provide an opt-in optimization preset using measured applicable transformations; retain the source/reference output and prove identities, motion and acceptable appearance survive.
-- [ ] **E04** Bundle all decoders/transcoders locally if compression requires them; check their version compatibility and notices. Lossy options are explicit and reported.
-- [ ] **E05** Meet the integrated-GPU reference performance gate below on the representative workflow; record actual hardware, graphics backend, browser, viewport and settings.
+- [x] **E01** Establish repeatable unoptimized baselines: package size, cold load, draw calls, triangles, texture sizes, frame-time distribution and available memory estimates; label unavailable metrics honestly.
+- [x] **E02** Profile the representative workflow and larger scene before optimizing; record the actual limiting resource rather than assuming file size explains frame rate.
+- [x] **E03** Provide an opt-in optimization preset using measured applicable transformations; retain the source/reference output and prove identities, motion and acceptable appearance survive.
+- [x] **E04** Bundle all decoders/transcoders locally if compression requires them; check their version compatibility and notices. Lossy options are explicit and reported.
+- [x] **E05** Meet the integrated-GPU reference performance gate below on the representative workflow; record actual hardware, graphics backend, browser, viewport and settings.
 - [ ] **E06** Obtain nonempty Isaac reference images for the same fixture at first, middle and final times, match camera/pose, and review geometry, scale, orientation and portable materials against browser images.
-- [ ] **E07** Report material approximations by affected object/material, provide visible fallback or strict-mode failure, and document the supported material/texture subset. Do not promise arbitrary RTX equivalence.
+- [x] **E07** Report material approximations by affected object/material, provide visible fallback or strict-mode failure, and document the supported material/texture subset. Do not promise arbitrary RTX equivalence.
 
 ### F — Isaac panel, preview and packaging
 
-- [ ] **F01** Add a thin Isaac/Kit export panel calling the shared core: source/selection, duration/sample rate, quality preset, output destination and recording/export actions.
-- [ ] **F02** Preflight reports incompatible versions, missing inputs/dependencies and invalid settings before expensive work where possible; selected roots are honored.
+- [x] **F01** Add a thin Isaac/Kit export panel calling the shared core: source/selection, duration/sample rate, quality preset, output destination and recording/export actions.
+- [x] **F02** Preflight reports incompatible versions, missing inputs/dependencies and invalid settings before expensive work where possible; selected roots are honored.
 - [ ] **F03** Recording/conversion progress remains responsive in an interactive Isaac session; cancellation restores a usable panel and leaves no false-success package. Test cancel during capture and conversion.
-- [ ] **F04** Add saved export presets, local browser preview and folder/ZIP output. Preview binds locally; it is not an external deployment.
-- [ ] **F05** Extract a generated ZIP into a new directory and serve it under a nested static URL; the default player works without Node, Isaac or Docker on the recipient machine.
-- [ ] **F06** Exercise the actual panel in the tested Isaac build and save UI evidence; importing the extension or testing the CLI alone does not satisfy the panel gate.
+- [x] **F04** Add saved export presets, local browser preview and folder/ZIP output. Preview binds locally; it is not an external deployment.
+- [x] **F05** Extract a generated ZIP into a new directory and serve it under a nested static URL; the default player works without Node, Isaac or Docker on the recipient machine.
+- [x] **F06** Exercise the actual panel in the tested Isaac build and save UI evidence; importing the extension or testing the CLI alone does not satisfy the panel gate.
 
 ### G — Guided demo authoring
 
-- [ ] **G01** Add a simple editor for chapter times/titles, captions, camera bookmarks/transitions and object-anchored labels/highlights; save versioned `experience.json`.
-- [ ] **G02** Support Explore and Guided demo modes. A user can leave the tour for free camera navigation and resume without corrupting the recording or playhead.
-- [ ] **G03** Seeking, restarting and looping reconstruct correct chapter/label state without duplicate actions or stale highlights; labels follow the selected object correctly.
-- [ ] **G04** Save, reload and apply presentation edits without re-exporting Isaac or changing the GLB hash; provide browser download/import of JSON and a documented way to update the package.
-- [ ] **G05** Ship one owned demonstration with at least three chapters, two camera views and a label on a moving object; verify invalid time/object references are reported.
+- [x] **G01** Add a simple editor for chapter times/titles, captions, camera bookmarks/transitions and object-anchored labels/highlights; save versioned `experience.json`.
+- [x] **G02** Support Explore and Guided demo modes. A user can leave the tour for free camera navigation and resume without corrupting the recording or playhead.
+- [x] **G03** Seeking, restarting and looping reconstruct correct chapter/label state without duplicate actions or stale highlights; labels follow the selected object correctly.
+- [x] **G04** Save, reload and apply presentation edits without re-exporting Isaac or changing the GLB hash; provide browser download/import of JSON and a documented way to update the package.
+- [x] **G05** Ship one owned demonstration with at least three chapters, two camera views and a label on a moving object; verify invalid time/object references are reported.
 
 ### H — Optional LLM/developer customization
 
-- [ ] **H01** Ship `LLM-HANDOFF.md`, readable schemas/object metadata and an editable source template or companion kit; document geometry, animation, identity and coordinate conventions.
-- [ ] **H02** Expose a small documented player API for play, pause, seek, selection, focus and camera setting; customizations use the API instead of private checkpoint globals.
-- [ ] **H03** Include three working examples: visual theme/captions, an object-focused guided tour, and a custom information panel. Validate each against the same recorded assets.
-- [ ] **H04** Validate configuration changes and document tests for custom-code edits. The default package and all examples work without a model service, account or API key.
+- [x] **H01** Ship `LLM-HANDOFF.md`, readable schemas/object metadata and an editable source template or companion kit; document geometry, animation, identity and coordinate conventions.
+- [x] **H02** Expose a small documented player API for play, pause, seek, selection, focus and camera setting; customizations use the API instead of private checkpoint globals.
+- [x] **H03** Include three working examples: visual theme/captions, an object-focused guided tour, and a custom information panel. Validate each against the same recorded assets.
+- [x] **H04** Validate configuration changes and document tests for custom-code edits. The default package and all examples work without a model service, account or API key.
 
 ### I — Regression, portability and failure handling
 
-- [ ] **I01** Automate the critical browser playback/control/selection/tour checks against final built packages, not only the dev server or internal helper functions.
-- [ ] **I02** Verify Chromium and Firefox on a recorded desktop configuration, plus Chromium on the integrated-GPU reference laptop; save browser versions and rendering backend evidence.
-- [ ] **I03** With external network requests blocked, copied packages and their tour/customization examples load and operate; no required CDN, remote font, texture or decoder remains.
-- [ ] **I04** Missing texture/body, corrupt/truncated/tampered GLB, invalid schema/ID/time, nonexistent input, unsupported schema version and conversion failure produce clear failures without false success.
-- [ ] **I05** Interrupted/cancelled export, unavailable converter and existing output directory are handled safely; no silent overwrite or damage to previous successful packages.
+- [x] **I01** Automate the critical browser playback/control/selection/tour checks against final built packages, not only the dev server or internal helper functions.
+- [x] **I02** Verify Chromium and Firefox on a recorded desktop configuration, plus Chromium on the integrated-GPU reference laptop; save browser versions and rendering backend evidence.
+- [x] **I03** With external network requests blocked, copied packages and their tour/customization examples load and operate; no required CDN, remote font, texture or decoder remains.
+- [x] **I04** Missing texture/body, corrupt/truncated/tampered GLB, invalid schema/ID/time, nonexistent input, unsupported schema version and conversion failure produce clear failures without false success.
+- [x] **I05** Interrupted/cancelled export, unavailable converter and existing output directory are handled safely; no silent overwrite or damage to previous successful packages.
 - [ ] **I06** Re-run relevant v0 regressions and all affected v1 gates after final changes; record unresolved issues and do not classify a required failed test as a known harmless limitation.
 
 ### J — Documentation and local v1 release
 
-- [ ] **J01** Write installation, one complete export workflow, panel usage, hosting, customization, troubleshooting and supported-feature documentation; commands and paths match the release.
+- [x] **J01** Write installation, one complete export workflow, panel usage, hosting, customization, troubleshooting and supported-feature documentation; commands and paths match the release.
 - [ ] **J02** Perform a clean-room walkthrough using only the documented steps in a fresh compatible environment. Record any fixes; distinguish this agent-run test from external novice-user feedback.
-- [ ] **J03** Include dependency notices and asset provenance; use owned or expressly redistributable samples in the release bundle. Private factory/uncleared stock assets stay outside it.
-- [ ] **J04** Record the project's license status. Do not invent the user's licensing choice; if no source license is selected, label the deliverable local/private and defer public release while preserving dependency obligations.
+- [x] **J03** Include dependency notices and asset provenance; use owned or expressly redistributable samples in the release bundle. Private factory/uncleared stock assets stay outside it.
+- [x] **J04** Record the project's license status. Do not invent the user's licensing choice; if no source license is selected, label the deliverable local/private and defer public release while preserving dependency obligations.
 - [ ] **J05** Build a versioned local v1 exporter/player distribution and example ZIPs; record hashes, toolchain lock, supported Isaac version and exact build commands.
 - [ ] **J06** Finish `V1_ACCEPTANCE.md` with every required ID passing and evidence available; create `V1_RELEASE_NOTES.md` describing supported scope and remaining out-of-scope limits.
 - [ ] **J07** Create coherent local exporter commits, report the final tested code revision and evidence revision, and verify no generated assets/secrets or cheese-factory changes were included.

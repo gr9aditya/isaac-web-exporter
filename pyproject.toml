@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "isaac-web-exporter"
-version = "0.1.0"
+version = "1.0.0"
 description = "Recorded Isaac Sim scene exporter for self-hosted browser playback"
 requires-python = ">=3.12"
 
@@ -14,3 +14,6 @@ isaac-web-package-check = "isaac_web_exporter.validate_package:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+isaac_web_exporter = ["player_dist/*", "player_dist/assets/*", "player_dist/THIRD_PARTY_LICENSES/*", "schemas/*.json", "package_files/*.md", "package_files/customization/*.md", "package_files/customization/examples/*.js"]

@@ -13,6 +13,9 @@ def box(stage, path, size, color, center):
     ]
     mesh = UsdGeom.Mesh.Define(stage, path)
     mesh.CreatePointsAttr(points)
+    # Hydra/RTX uses USD extents for culling; without them the browser GLB may
+    # look correct while Isaac's own viewport renders the authored mesh black.
+    mesh.CreateExtentAttr([Gf.Vec3f(-x, -y, -z), Gf.Vec3f(x, y, z)])
     mesh.CreateFaceVertexCountsAttr([4] * 6)
     mesh.CreateFaceVertexIndicesAttr([
         0, 3, 2, 1, 4, 5, 6, 7, 0, 1, 5, 4,

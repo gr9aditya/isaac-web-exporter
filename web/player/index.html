@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>Isaac Replay Studio</title>
+  </head>
+  <body>
+    <main>
+      <header class="masthead">
+        <div><strong>Isaac Replay Studio</strong><small>Recorded playback</small></div>
+        <span id="status" role="status">Loading scene…</span>
+        <button id="info-toggle" type="button" title="Compatibility information">Info</button>
+      </header>
+      <div class="workspace">
+        <section class="viewport" aria-label="3D scene">
+          <div id="canvas"></div>
+          <div class="view-actions">
+            <button id="reset-view" type="button" disabled>Reset view</button>
+            <select id="camera-bookmark" aria-label="Camera bookmark" disabled><option value="">Camera views</option></select>
+            <button id="mode-toggle" type="button" disabled>Guided demo</button>
+          </div>
+          <div id="tour-banner" hidden><strong id="tour-title"></strong><span id="tour-caption"></span></div>
+          <div id="anchor-label" hidden></div>
+        </section>
+        <aside class="inspector" aria-label="Scene objects">
+          <div class="aside-heading"><strong>Objects</strong><span id="object-count"></span></div>
+          <input id="object-search" type="search" placeholder="Search objects" aria-label="Search objects" />
+          <div id="object-list" role="listbox" aria-label="Scene objects"></div>
+          <div class="selection-actions">
+            <button id="focus-object" type="button" disabled>Focus</button>
+            <button id="isolate-object" type="button" disabled>Isolate</button>
+            <button id="clear-selection" type="button" disabled>Clear</button>
+          </div>
+          <p id="selection-detail">Select an object to inspect it.</p>
+          <div id="compatibility" hidden></div>
+          <details id="tour-editor">
+            <summary>Edit guided demo</summary>
+            <div id="chapter-list"></div>
+            <label>Time (s) <input id="chapter-time" type="number" min="0" step="0.01" value="0" /></label>
+            <label>Title <input id="chapter-title-input" type="text" maxlength="80" /></label>
+            <label>Caption <textarea id="chapter-caption-input" rows="2" maxlength="500"></textarea></label>
+            <label>Highlight object <select id="chapter-object"><option value="">None</option></select></label>
+            <label>Object label <input id="chapter-label" type="text" maxlength="100" /></label>
+            <label><input id="chapter-use-camera" type="checkbox" /> Save current camera</label>
+            <label>Camera transition (s) <input id="chapter-transition" type="number" min="0" max="10" step="0.1" value="0" /></label>
+            <div class="selection-actions"><button id="add-chapter" type="button">Add chapter</button><button id="download-tour" type="button">Download JSON</button></div>
+            <label>Import JSON <input id="import-tour" type="file" accept="application/json,.json" /></label>
+            <div id="tour-error" role="status"></div>
+          </details>
+        </aside>
+      </div>
+      <section class="timeline" aria-label="Playback controls">
+        <div class="transport">
+          <button id="start" type="button" disabled>Start</button>
+          <button id="pause" type="button" disabled>Pause</button>
+          <button id="restart" type="button" disabled>Restart</button>
+          <button id="step-back" type="button" title="Previous recorded frame" disabled>◀ Frame</button>
+          <button id="step-forward" type="button" title="Next recorded frame" disabled>Frame ▶</button>
+          <label>Speed <select id="speed" disabled><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+          <label><input id="loop" type="checkbox" disabled /> Loop</label>
+          <label>Clip <select id="clip-select" disabled></select></label>
+          <span id="time">0.00 / 0.00 s</span>
+        </div>
+        <input id="seek" type="range" min="0" max="1" step="0.001" value="0" aria-label="Timeline seek" disabled />
+        <div class="hints">Drag: orbit · Right drag: pan · Scroll: zoom · Space: play/pause · ←/→: frame step</div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

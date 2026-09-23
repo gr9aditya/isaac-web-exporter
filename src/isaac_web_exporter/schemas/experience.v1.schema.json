@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/isaac-web-exporter/experience.v1.schema.json",
+  "title": "Isaac Replay presentation v1.0",
+  "type": "object",
+  "required": ["schemaVersion", "chapters"],
+  "properties": {
+    "schemaVersion": {"const": "v1.0"},
+    "chapters": {"type": "array", "items": {"type": "object", "required": ["id", "startSeconds", "title", "caption"], "properties": {
+      "id": {"type": "string", "minLength": 1},
+      "clipIndex": {"type": "integer", "minimum": 0},
+      "startSeconds": {"type": "number", "minimum": 0},
+      "title": {"type": "string", "minLength": 1},
+      "caption": {"type": "string"},
+      "objectId": {"type": "string"},
+      "label": {"type": "string"},
+      "camera": {"type": "object", "required": ["position", "target"], "properties": {
+        "position": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}},
+        "target": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number"}}}},
+      "transitionSeconds": {"type": "number", "minimum": 0, "maximum": 10}
+    }}}
+  }
+}

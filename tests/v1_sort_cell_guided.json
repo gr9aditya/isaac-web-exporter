@@ -1,0 +1,17 @@
+{
+  "bootstrap": "/work/examples/sort_cell_workflow.py",
+  "output_dir": "/work/runs/v1-sort-cell-guided",
+  "capture_roots": [],
+  "expected_rigid_bodies": 0,
+  "duration_seconds": 30,
+  "fps": 30,
+  "simulation_hz": 30,
+  "sample_every_updates": 1,
+  "conversion_timeout_seconds": 180,
+  "camera": {"position": [7, 6, 9], "target": [0, 0.6, 0.5]},
+  "camera_bookmarks": [
+    {"name": "Inspection", "position": [3, 3, 5], "target": [-0.8, 0.8, 0.7]},
+    {"name": "Output", "position": [5, 4, 6], "target": [1, 1, 0]}
+  ],
+  "experience": "/work/examples/sort_cell_experience.json"
+}

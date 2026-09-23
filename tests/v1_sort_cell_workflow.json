@@ -1,0 +1,12 @@
+{
+  "bootstrap": "/work/examples/sort_cell_workflow.py",
+  "output_dir": "/work/runs/v1-sort-cell-workflow",
+  "capture_roots": [],
+  "expected_rigid_bodies": 0,
+  "duration_seconds": 30,
+  "fps": 30,
+  "simulation_hz": 30,
+  "sample_every_updates": 1,
+  "conversion_timeout_seconds": 180,
+  "camera": {"position": [7, 6, 9], "target": [0, 0.6, 0.5]}
+}

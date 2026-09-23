@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "v0.1",
+  "schemaVersion": "v1.0",
   "isaac": {
     "containerImage": "nvcr.io/nvidia/isaac-sim@sha256:af1d2b4e75d553bfa27beb5a401198654aa8d607f3b7a6749196e9ce253def20",
     "appVersion": "6.1.0",
@@ -11,9 +11,9 @@
   },
   "player": {
     "three": "0.185.0",
-    "vite": "6.3.0",
-    "packageLockSha256": "3afc0cd18f838654d37a97caab89e56a7d1d414a23860b8a2a57c14d0baa4e94",
-    "builtJsSha256": "387b84861d44f246561fc255d7221af0679494b2a7b65cf9331323bf0ba6daa4"
+    "vite": "6.4.3",
+    "packageLockSha256": "7641c204e310e68c10c06b20f0654a7b10629f5ca903c1d4a49d9d6d112c209f",
+    "builtJsSha256": "1cafc92b7c1dc874fbd1260e49d9e005d6a23aa87e592ea4f600a8773a009ffc"
   },
   "routeComparison": {
     "usdWebViewCommit": "b050c3731d1854a5980b6b4fe55ec1725dc18f51",

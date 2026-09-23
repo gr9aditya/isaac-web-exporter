@@ -17,3 +17,8 @@ viewer-template/
 viewer-template-v2/
 viewer-template-v0/
 third_party/usd-webview-eval/
+web/player/node_modules/
+web/player/dist/
+build/
+dist/
+src/*.egg-info/

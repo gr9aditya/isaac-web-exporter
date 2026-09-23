@@ -1,0 +1,13 @@
+[package]
+version = "1.0.0"
+title = "Isaac Replay Exporter"
+description = "Export recorded Isaac scenes to self-hosted browser packages"
+category = "Export"
+authors = ["Isaac Web Exporter contributors"]
+
+[dependencies]
+"omni.ui" = {}
+"omni.usd" = {}
+
+[[python.module]]
+name = "isaac_web_exporter_panel"

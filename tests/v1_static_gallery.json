@@ -1,0 +1,8 @@
+{
+  "bootstrap": "/work/examples/static_gallery.py",
+  "output_dir": "/work/runs/v1-static-gallery",
+  "mode": "static",
+  "capture_roots": [],
+  "duration_seconds": 0,
+  "fps": 30
+}

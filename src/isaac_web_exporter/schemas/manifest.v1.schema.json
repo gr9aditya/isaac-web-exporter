@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/isaac-web-exporter/manifest.v1.schema.json",
+  "title": "Isaac Replay manifest v1.0",
+  "type": "object",
+  "required": ["schemaVersion", "mode", "asset", "assetSha256", "durationSeconds", "fps", "metersPerUnit", "sourceUpAxis", "viewerUpAxis", "clipSampleTimes", "source"],
+  "properties": {
+    "schemaVersion": {"const": "v1.0"},
+    "mode": {"enum": ["recorded-playback", "static-scene"]},
+    "asset": {"type": "string", "minLength": 1},
+    "assetSha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "durationSeconds": {"type": "number", "minimum": 0},
+    "fps": {"type": "number", "exclusiveMinimum": 0},
+    "startTimeCode": {"type": "number"},
+    "endTimeCode": {"type": "number"},
+    "metersPerUnit": {"type": "number", "exclusiveMinimum": 0},
+    "sourceUpAxis": {"enum": ["Y", "Z"]},
+    "viewerUpAxis": {"const": "Y"},
+    "clipSampleTimes": {"type": "array", "items": {"type": "array", "items": {"type": "number", "minimum": 0}}},
+    "experience": {"type": "string"},
+    "source": {"type": "object", "required": ["application", "version"]}
+  }
+}
