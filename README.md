@@ -1,16 +1,66 @@
-# Isaac Web Exporter v1 (local candidate)
+# Isaac Web Exporter
 
-Export an Isaac Sim stage and its recorded transform motion to a self-hostable
-browser package. The bundled Three.js player provides Start/Pause/Restart,
-scrubbing, frame stepping, speed and loop controls, camera navigation, object
-inspection, and a guided-demo editor. The recipient needs only static HTTP
-hosting and a WebGL browser. Isaac, Docker, an RTX card, a live server, and an
-LLM are not required at playback time. The recording does not run Isaac
-physics, project controllers, sensors, or ROS in the browser.
+**Turn an Isaac Sim run into a scene people can explore, not just a video they
+can watch.** Isaac Web Exporter packages compatible scene geometry, materials,
+and recorded robot and object motion with a self-hostable browser player. The
+recipient can open it on an ordinary WebGL-capable computer without installing
+Isaac Sim, running Docker, or connecting to an RTX server.
+
+[Explore the live cheese-factory export](https://adiy.ch/cheese) ·
+[Download its sample package](sample-exports/cheese-factory/package.zip)
+
+![Isaac Replay Studio showing the recorded cheese-factory workflow at 35 seconds](sample-exports/cheese-factory/screenshots/guided-35.png)
+
+## Why browser export matters
+
+Isaac Sim helps teams build and test complex robot systems, but the result is
+harder to share than the simulation itself. A video captures one camera angle
+at one pace. When a reviewer asks what happened outside that frame, the video
+has no answer. An exported scene lets each viewer pause, scrub, step
+frame by frame, orbit the camera, focus an object, and inspect the recorded
+motion in the context of the surrounding environment. The same run can be
+revisited without asking an engineer to rerun Isaac or operate a screen share.
+
+For developers, this makes a project easier to review across disciplines.
+They can share a captured workflow with teammates who do not have the source
+stage, Isaac installation, or simulation hardware. A colleague can examine
+the timing of a pick, the path of a robot link, or the position of an item
+from a different viewpoint, then point to the same moment in the recording.
+The package carries scene and object metadata alongside the animation, so the
+viewer can identify what it is looking at rather than rely on a fixed camera
+shot and narration.
+
+For managers and other reviewers, the browser becomes a direct window into
+the **recorded operation**. A guided tour can explain the task and jump to key
+events, while the free camera and timeline let them check what the captured
+robots and items did throughout the exported scene. They can see the sequence
+and spatial relationships for themselves, including moments that a short
+highlight video might skip. This is especially useful when a decision depends
+on understanding the whole workflow rather than a single success frame.
+
+For product and marketing teams, the same export can become an interactive
+demo on a normal website. Visitors can start the workflow, pause at a feature,
+explore the cell, and follow a curated explanation at their own pace. Static
+hosting makes the demo easy to distribute without keeping a live simulator or
+GPU server available for every visitor. A video still has a place when final
+render quality or sensor imagery is the goal; the browser package adds agency,
+object-level inspection, and repeatable access to the recorded 3D scene.
+
+This is a valuable delivery step for Isaac Sim projects: the work done inside
+the simulator becomes something developers, decision-makers, and prospective
+users can inspect directly. The export is **recorded playback**, not live
+physics or remote control. It shows the geometry and transform motion selected
+for capture; project controllers, sensors, ROS, and unsupported animation are
+not executed in the browser.
+
+The bundled Three.js player provides Start/Pause/Restart, scrubbing, frame
+stepping, speed and loop controls, camera navigation, object inspection, and a
+guided-demo editor. An LLM is not required to view or customize a package.
 
 The source repository is public but has no selected source-code license; see
-[LICENSE_STATUS.md](LICENSE_STATUS.md). Private project assets and their browser
-exports stay in ignored local `runs/` folders and are not included in Git.
+[LICENSE_STATUS.md](LICENSE_STATUS.md). The authorized full-visual
+[cheese-factory sample](sample-exports/cheese-factory/README.md) is included in
+Git; other private project runs stay in ignored local `runs/` folders.
 The v1 checklist and test evidence live in [V1_ACCEPTANCE.md](V1_ACCEPTANCE.md).
 
 ## Build and install
