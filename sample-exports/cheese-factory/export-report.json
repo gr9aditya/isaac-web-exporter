@@ -1,0 +1,1906 @@
+{
+  "schemaVersion": "v1.0",
+  "status": "success",
+  "warnings": [],
+  "errors": [],
+  "capture": {},
+  "converter": {
+    "success": true,
+    "status": "OmniConverterStatus.OK",
+    "error": "",
+    "finished": true,
+    "elapsed_seconds": 2.9
+  },
+  "glb": {
+    "bytes": 29203776,
+    "meshes": 180,
+    "materials": 211,
+    "animations": 1,
+    "channels": [
+      {
+        "node": "panda_link0",
+        "node_index": 5,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link0",
+        "node_index": 5,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link1",
+        "node_index": 9,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link1",
+        "node_index": 9,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link2",
+        "node_index": 13,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link2",
+        "node_index": 13,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link3",
+        "node_index": 17,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link3",
+        "node_index": 17,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link4",
+        "node_index": 21,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link4",
+        "node_index": 21,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link5",
+        "node_index": 25,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link5",
+        "node_index": 25,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link6",
+        "node_index": 29,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link6",
+        "node_index": 29,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_link7",
+        "node_index": 33,
+        "path": "translation"
+      },
+      {
+        "node": "panda_link7",
+        "node_index": 33,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_hand",
+        "node_index": 37,
+        "path": "translation"
+      },
+      {
+        "node": "panda_hand",
+        "node_index": 37,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_rightfinger",
+        "node_index": 40,
+        "path": "translation"
+      },
+      {
+        "node": "panda_rightfinger",
+        "node_index": 40,
+        "path": "rotation"
+      },
+      {
+        "node": "panda_leftfinger",
+        "node_index": 45,
+        "path": "translation"
+      },
+      {
+        "node": "panda_leftfinger",
+        "node_index": 45,
+        "path": "rotation"
+      },
+      {
+        "node": "Item000",
+        "node_index": 209,
+        "path": "translation"
+      },
+      {
+        "node": "Item001",
+        "node_index": 211,
+        "path": "translation"
+      },
+      {
+        "node": "Item002",
+        "node_index": 213,
+        "path": "translation"
+      },
+      {
+        "node": "Item003",
+        "node_index": 215,
+        "path": "translation"
+      },
+      {
+        "node": "Item004",
+        "node_index": 217,
+        "path": "translation"
+      },
+      {
+        "node": "Item005",
+        "node_index": 219,
+        "path": "translation"
+      },
+      {
+        "node": "Item006",
+        "node_index": 221,
+        "path": "translation"
+      },
+      {
+        "node": "Item007",
+        "node_index": 223,
+        "path": "translation"
+      },
+      {
+        "node": "Item008",
+        "node_index": 225,
+        "path": "translation"
+      },
+      {
+        "node": "Item009",
+        "node_index": 227,
+        "path": "translation"
+      },
+      {
+        "node": "Item010",
+        "node_index": 229,
+        "path": "translation"
+      }
+    ],
+    "external_uris": [],
+    "node_anomalies": []
+  },
+  "converted_analytic_cubes": [
+    "/World/ActiveObject",
+    "/World/Factory/Floor",
+    "/World/Factory/SafetyBoundary/west",
+    "/World/Factory/SafetyBoundary/east",
+    "/World/Factory/SafetyBoundary/south",
+    "/World/Factory/SafetyBoundary/north",
+    "/World/Factory/Conveyor/left_rail",
+    "/World/Factory/Conveyor/right_rail",
+    "/World/Factory/Conveyor/slat_00",
+    "/World/Factory/Conveyor/slat_01",
+    "/World/Factory/Conveyor/slat_02",
+    "/World/Factory/Conveyor/slat_03",
+    "/World/Factory/Conveyor/slat_04",
+    "/World/Factory/Conveyor/slat_05",
+    "/World/Factory/Conveyor/slat_06",
+    "/World/Factory/Conveyor/slat_07",
+    "/World/Factory/Conveyor/slat_08",
+    "/World/Factory/Conveyor/slat_09",
+    "/World/Factory/Conveyor/slat_10",
+    "/World/Factory/Conveyor/leg_0_left",
+    "/World/Factory/Conveyor/leg_0_right",
+    "/World/Factory/Conveyor/leg_1_left",
+    "/World/Factory/Conveyor/leg_1_right",
+    "/World/Factory/Conveyor/foot_0_left",
+    "/World/Factory/Conveyor/foot_0_right",
+    "/World/Factory/Conveyor/foot_1_left",
+    "/World/Factory/Conveyor/foot_1_right",
+    "/World/Factory/Inspection/left_post",
+    "/World/Factory/Inspection/right_post",
+    "/World/Factory/Inspection/left_guard",
+    "/World/Factory/Inspection/right_guard",
+    "/World/Factory/Inspection/crossbeam",
+    "/World/Factory/Inspection/camera_body",
+    "/World/Factory/Inspection/camera_lens",
+    "/World/Factory/PlanningObstacles/Inspection/left_post",
+    "/World/Factory/PlanningObstacles/Inspection/right_post",
+    "/World/Factory/PlanningObstacles/Inspection/crossbeam",
+    "/World/Factory/Beacon/post",
+    "/World/Factory/Beacon/lamp_0",
+    "/World/Factory/Beacon/lamp_1",
+    "/World/Factory/Beacon/lamp_2",
+    "/World/Conveyor",
+    "/World/ConveyorCollider",
+    "/World/Bins/bin_hard/Floor",
+    "/World/Bins/bin_hard/Left",
+    "/World/Bins/bin_hard/Right",
+    "/World/Bins/bin_hard/Back",
+    "/World/Bins/bin_hard/Station/base",
+    "/World/Bins/bin_hard/Station/leg_0",
+    "/World/Bins/bin_hard/Station/foot_0",
+    "/World/Bins/bin_hard/Station/leg_1",
+    "/World/Bins/bin_hard/Station/foot_1",
+    "/World/Bins/bin_hard/Station/leg_2",
+    "/World/Bins/bin_hard/Station/foot_2",
+    "/World/Bins/bin_hard/Station/leg_3",
+    "/World/Bins/bin_hard/Station/foot_3",
+    "/World/Bins/bin_hard/Station/accent",
+    "/World/Bins/bin_hard/Station/sign_post",
+    "/World/Bins/bin_semi_hard/Floor",
+    "/World/Bins/bin_semi_hard/Left",
+    "/World/Bins/bin_semi_hard/Right",
+    "/World/Bins/bin_semi_hard/Back",
+    "/World/Bins/bin_semi_hard/Station/base",
+    "/World/Bins/bin_semi_hard/Station/leg_0",
+    "/World/Bins/bin_semi_hard/Station/foot_0",
+    "/World/Bins/bin_semi_hard/Station/leg_1",
+    "/World/Bins/bin_semi_hard/Station/foot_1",
+    "/World/Bins/bin_semi_hard/Station/leg_2",
+    "/World/Bins/bin_semi_hard/Station/foot_2",
+    "/World/Bins/bin_semi_hard/Station/leg_3",
+    "/World/Bins/bin_semi_hard/Station/foot_3",
+    "/World/Bins/bin_semi_hard/Station/accent",
+    "/World/Bins/bin_semi_hard/Station/sign_post",
+    "/World/Bins/bin_soft/Floor",
+    "/World/Bins/bin_soft/Left",
+    "/World/Bins/bin_soft/Right",
+    "/World/Bins/bin_soft/Back",
+    "/World/Bins/bin_soft/Station/base",
+    "/World/Bins/bin_soft/Station/leg_0",
+    "/World/Bins/bin_soft/Station/foot_0",
+    "/World/Bins/bin_soft/Station/leg_1",
+    "/World/Bins/bin_soft/Station/foot_1",
+    "/World/Bins/bin_soft/Station/leg_2",
+    "/World/Bins/bin_soft/Station/foot_2",
+    "/World/Bins/bin_soft/Station/leg_3",
+    "/World/Bins/bin_soft/Station/foot_3",
+    "/World/Bins/bin_soft/Station/accent",
+    "/World/Bins/bin_soft/Station/sign_post",
+    "/World/Bins/bin_fresh/Floor",
+    "/World/Bins/bin_fresh/Left",
+    "/World/Bins/bin_fresh/Right",
+    "/World/Bins/bin_fresh/Back",
+    "/World/Bins/bin_fresh/Station/base",
+    "/World/Bins/bin_fresh/Station/leg_0",
+    "/World/Bins/bin_fresh/Station/foot_0",
+    "/World/Bins/bin_fresh/Station/leg_1",
+    "/World/Bins/bin_fresh/Station/foot_1",
+    "/World/Bins/bin_fresh/Station/leg_2",
+    "/World/Bins/bin_fresh/Station/foot_2",
+    "/World/Bins/bin_fresh/Station/leg_3",
+    "/World/Bins/bin_fresh/Station/foot_3",
+    "/World/Bins/bin_fresh/Station/accent",
+    "/World/Bins/bin_fresh/Station/sign_post",
+    "/World/Bins/bin_blue/Floor",
+    "/World/Bins/bin_blue/Left",
+    "/World/Bins/bin_blue/Right",
+    "/World/Bins/bin_blue/Back",
+    "/World/Bins/bin_blue/Station/base",
+    "/World/Bins/bin_blue/Station/leg_0",
+    "/World/Bins/bin_blue/Station/foot_0",
+    "/World/Bins/bin_blue/Station/leg_1",
+    "/World/Bins/bin_blue/Station/foot_1",
+    "/World/Bins/bin_blue/Station/leg_2",
+    "/World/Bins/bin_blue/Station/foot_2",
+    "/World/Bins/bin_blue/Station/leg_3",
+    "/World/Bins/bin_blue/Station/foot_3",
+    "/World/Bins/bin_blue/Station/accent",
+    "/World/Bins/bin_blue/Station/sign_post",
+    "/World/Bins/reject/Floor",
+    "/World/Bins/reject/Left",
+    "/World/Bins/reject/Right",
+    "/World/Bins/reject/Back",
+    "/World/Bins/reject/Station/base",
+    "/World/Bins/reject/Station/leg_0",
+    "/World/Bins/reject/Station/foot_0",
+    "/World/Bins/reject/Station/leg_1",
+    "/World/Bins/reject/Station/foot_1",
+    "/World/Bins/reject/Station/leg_2",
+    "/World/Bins/reject/Station/foot_2",
+    "/World/Bins/reject/Station/leg_3",
+    "/World/Bins/reject/Station/foot_3",
+    "/World/Bins/reject/Station/accent",
+    "/World/Bins/reject/Station/sign_post"
+  ],
+  "authored_moving_paths": [
+    "/World/Franka/panda_hand",
+    "/World/Franka/panda_leftfinger",
+    "/World/Franka/panda_link1",
+    "/World/Franka/panda_link2",
+    "/World/Franka/panda_link3",
+    "/World/Franka/panda_link4",
+    "/World/Franka/panda_link5",
+    "/World/Franka/panda_link6",
+    "/World/Franka/panda_link7",
+    "/World/Franka/panda_rightfinger",
+    "/World/RecordedItems/Item000",
+    "/World/RecordedItems/Item001",
+    "/World/RecordedItems/Item002",
+    "/World/RecordedItems/Item003",
+    "/World/RecordedItems/Item004",
+    "/World/RecordedItems/Item005",
+    "/World/RecordedItems/Item006",
+    "/World/RecordedItems/Item007",
+    "/World/RecordedItems/Item008",
+    "/World/RecordedItems/Item009",
+    "/World/RecordedItems/Item010"
+  ],
+  "source_dependencies": {
+    "resolved_layers": 1,
+    "resolved_assets": 18,
+    "unresolved_count": 0
+  },
+  "materials": [
+    {
+      "object": "/World/ground_plane/geom",
+      "material": "/World/ground_plane/visualMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/ground_plane/collisionPlane",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link0/geometry/panda_link0",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link1/geometry/panda_link1",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link2/geometry/panda_link2",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link3/geometry/panda_link3",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link4/geometry/panda_link4",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link5/geometry/panda_link5",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link6/geometry/panda_link6",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_link7/geometry/panda_link7",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_hand/geometry/panda_hand",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Franka/panda_rightfinger/geometry/ID27",
+      "material": "/World/Franka/panda_rightfinger/geometry/Looks/RubberWhite",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Franka/panda_rightfinger/geometry/ID27fa3",
+      "material": "/World/Franka/panda_rightfinger/geometry/Looks/AluminumRough",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Franka/panda_rightfinger/geometry/ID27SVM",
+      "material": "/World/Franka/panda_rightfinger/geometry/Looks/AluminumRough",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Franka/panda_leftfinger/geometry/ID27",
+      "material": "/World/Franka/panda_leftfinger/geometry/Looks/RubberWhite",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Franka/panda_leftfinger/geometry/ID27fa3",
+      "material": "/World/Franka/panda_leftfinger/geometry/Looks/AluminumRough",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Franka/panda_leftfinger/geometry/ID27SVM",
+      "material": "/World/Franka/panda_leftfinger/geometry/Looks/AluminumRough",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/ActiveObject",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Factory/Floor",
+      "material": "/World/FactoryMaterials/floor",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/SafetyBoundary/west",
+      "material": "/World/FactoryMaterials/safety",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/SafetyBoundary/east",
+      "material": "/World/FactoryMaterials/safety",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/SafetyBoundary/south",
+      "material": "/World/FactoryMaterials/safety",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/SafetyBoundary/north",
+      "material": "/World/FactoryMaterials/safety",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/left_rail",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/right_rail",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_00",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_01",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_02",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_03",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_04",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_05",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_06",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_07",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_08",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_09",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/slat_10",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/leg_0_left",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/leg_0_right",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/leg_1_left",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/leg_1_right",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/foot_0_left",
+      "material": "/World/FactoryMaterials/dark",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/foot_0_right",
+      "material": "/World/FactoryMaterials/dark",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/foot_1_left",
+      "material": "/World/FactoryMaterials/dark",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Conveyor/foot_1_right",
+      "material": "/World/FactoryMaterials/dark",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/left_post",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/right_post",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/left_guard",
+      "material": "/World/FactoryMaterials/safety",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/right_guard",
+      "material": "/World/FactoryMaterials/safety",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/crossbeam",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/camera_body",
+      "material": "/World/FactoryMaterials/dark",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Inspection/camera_lens",
+      "material": "/World/FactoryMaterials/lens",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/PlanningObstacles/Inspection/left_post",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Factory/PlanningObstacles/Inspection/right_post",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Factory/PlanningObstacles/Inspection/crossbeam",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Factory/Beacon/post",
+      "material": "/World/FactoryMaterials/steel",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Beacon/lamp_0",
+      "material": "/World/FactoryMaterials/beacon_green",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Beacon/lamp_1",
+      "material": "/World/FactoryMaterials/beacon_amber",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Factory/Beacon/lamp_2",
+      "material": "/World/FactoryMaterials/beacon_red",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Conveyor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/ConveyorCollider",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Floor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Left",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Right",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Back",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/base",
+      "material": "/World/Bins/bin_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/leg_0",
+      "material": "/World/Bins/bin_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/foot_0",
+      "material": "/World/Bins/bin_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/leg_1",
+      "material": "/World/Bins/bin_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/foot_1",
+      "material": "/World/Bins/bin_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/leg_2",
+      "material": "/World/Bins/bin_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/foot_2",
+      "material": "/World/Bins/bin_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/leg_3",
+      "material": "/World/Bins/bin_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/foot_3",
+      "material": "/World/Bins/bin_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/accent",
+      "material": "/World/Bins/bin_hard/AccentMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/sign_post",
+      "material": "/World/Bins/bin_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_hard/Station/label",
+      "material": "/World/Bins/bin_hard/Station/LabelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Floor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Left",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Right",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Back",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/base",
+      "material": "/World/Bins/bin_semi_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/leg_0",
+      "material": "/World/Bins/bin_semi_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/foot_0",
+      "material": "/World/Bins/bin_semi_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/leg_1",
+      "material": "/World/Bins/bin_semi_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/foot_1",
+      "material": "/World/Bins/bin_semi_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/leg_2",
+      "material": "/World/Bins/bin_semi_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/foot_2",
+      "material": "/World/Bins/bin_semi_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/leg_3",
+      "material": "/World/Bins/bin_semi_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/foot_3",
+      "material": "/World/Bins/bin_semi_hard/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/accent",
+      "material": "/World/Bins/bin_semi_hard/AccentMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/sign_post",
+      "material": "/World/Bins/bin_semi_hard/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_semi_hard/Station/label",
+      "material": "/World/Bins/bin_semi_hard/Station/LabelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Floor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Left",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Right",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Back",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/base",
+      "material": "/World/Bins/bin_soft/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/leg_0",
+      "material": "/World/Bins/bin_soft/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/foot_0",
+      "material": "/World/Bins/bin_soft/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/leg_1",
+      "material": "/World/Bins/bin_soft/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/foot_1",
+      "material": "/World/Bins/bin_soft/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/leg_2",
+      "material": "/World/Bins/bin_soft/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/foot_2",
+      "material": "/World/Bins/bin_soft/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/leg_3",
+      "material": "/World/Bins/bin_soft/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/foot_3",
+      "material": "/World/Bins/bin_soft/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/accent",
+      "material": "/World/Bins/bin_soft/AccentMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/sign_post",
+      "material": "/World/Bins/bin_soft/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_soft/Station/label",
+      "material": "/World/Bins/bin_soft/Station/LabelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Floor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Left",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Right",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Back",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/base",
+      "material": "/World/Bins/bin_fresh/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/leg_0",
+      "material": "/World/Bins/bin_fresh/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/foot_0",
+      "material": "/World/Bins/bin_fresh/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/leg_1",
+      "material": "/World/Bins/bin_fresh/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/foot_1",
+      "material": "/World/Bins/bin_fresh/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/leg_2",
+      "material": "/World/Bins/bin_fresh/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/foot_2",
+      "material": "/World/Bins/bin_fresh/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/leg_3",
+      "material": "/World/Bins/bin_fresh/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/foot_3",
+      "material": "/World/Bins/bin_fresh/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/accent",
+      "material": "/World/Bins/bin_fresh/AccentMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/sign_post",
+      "material": "/World/Bins/bin_fresh/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_fresh/Station/label",
+      "material": "/World/Bins/bin_fresh/Station/LabelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Floor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Left",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Right",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Back",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/base",
+      "material": "/World/Bins/bin_blue/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/leg_0",
+      "material": "/World/Bins/bin_blue/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/foot_0",
+      "material": "/World/Bins/bin_blue/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/leg_1",
+      "material": "/World/Bins/bin_blue/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/foot_1",
+      "material": "/World/Bins/bin_blue/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/leg_2",
+      "material": "/World/Bins/bin_blue/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/foot_2",
+      "material": "/World/Bins/bin_blue/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/leg_3",
+      "material": "/World/Bins/bin_blue/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/foot_3",
+      "material": "/World/Bins/bin_blue/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/accent",
+      "material": "/World/Bins/bin_blue/AccentMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/sign_post",
+      "material": "/World/Bins/bin_blue/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/bin_blue/Station/label",
+      "material": "/World/Bins/bin_blue/Station/LabelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Floor",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/reject/Left",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/reject/Right",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/reject/Back",
+      "material": null,
+      "conversion": "default-visible-material",
+      "approximation": "Unbound geometry uses the browser's visible default material"
+    },
+    {
+      "object": "/World/Bins/reject/Station/base",
+      "material": "/World/Bins/reject/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/leg_0",
+      "material": "/World/Bins/reject/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/foot_0",
+      "material": "/World/Bins/reject/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/leg_1",
+      "material": "/World/Bins/reject/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/foot_1",
+      "material": "/World/Bins/reject/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/leg_2",
+      "material": "/World/Bins/reject/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/foot_2",
+      "material": "/World/Bins/reject/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/leg_3",
+      "material": "/World/Bins/reject/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/foot_3",
+      "material": "/World/Bins/reject/DarkMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/accent",
+      "material": "/World/Bins/reject/AccentMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/sign_post",
+      "material": "/World/Bins/reject/SteelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/Bins/reject/Station/label",
+      "material": "/World/Bins/reject/Station/LabelMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/InspectionCarrier/Plate",
+      "material": "/World/InspectionCarrier/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/InspectionCarrier/Cheese",
+      "material": "/World/InspectionCarrier/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item000/Plate",
+      "material": "/World/RecordedItems/Item000/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item000/Cheese",
+      "material": "/World/RecordedItems/Item000/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item001/Plate",
+      "material": "/World/RecordedItems/Item001/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item001/Cheese",
+      "material": "/World/RecordedItems/Item001/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item002/Plate",
+      "material": "/World/RecordedItems/Item002/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item002/Cheese",
+      "material": "/World/RecordedItems/Item002/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item003/Plate",
+      "material": "/World/RecordedItems/Item003/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item003/Cheese",
+      "material": "/World/RecordedItems/Item003/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item004/Plate",
+      "material": "/World/RecordedItems/Item004/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item004/Cheese",
+      "material": "/World/RecordedItems/Item004/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item005/Plate",
+      "material": "/World/RecordedItems/Item005/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item005/Cheese",
+      "material": "/World/RecordedItems/Item005/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item006/Plate",
+      "material": "/World/RecordedItems/Item006/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item006/Cheese",
+      "material": "/World/RecordedItems/Item006/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item007/Plate",
+      "material": "/World/RecordedItems/Item007/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item007/Cheese",
+      "material": "/World/RecordedItems/Item007/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item008/Plate",
+      "material": "/World/RecordedItems/Item008/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item008/Cheese",
+      "material": "/World/RecordedItems/Item008/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item009/Plate",
+      "material": "/World/RecordedItems/Item009/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item009/Cheese",
+      "material": "/World/RecordedItems/Item009/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item010/Plate",
+      "material": "/World/RecordedItems/Item010/PlateMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    },
+    {
+      "object": "/World/RecordedItems/Item010/Cheese",
+      "material": "/World/RecordedItems/Item010/CheeseMaterial",
+      "shaderIds": [
+        "UsdPreviewSurface",
+        "UsdPrimvarReader_float2",
+        "UsdUVTexture"
+      ],
+      "conversion": "USD PreviewSurface to glTF PBR approximation",
+      "approximation": "Lighting and material response are not RTX pixel-equivalent"
+    }
+  ],
+  "optimization": {
+    "preset": "standard",
+    "transformations": []
+  },
+  "package_validation": {
+    "status": "success",
+    "errors": [],
+    "glbBytes": 29203776,
+    "glbSha256": "4dc7507a4c99beaf75b1ef22e3150ba57cc26b1fe0ccdc74d5524816b08ab88d",
+    "meshes": 180,
+    "animations": 1,
+    "htmlResources": [
+      "./assets/index-C8X9-rgi.js",
+      "./assets/index-DmTUqqY4.css"
+    ]
+  }
+}

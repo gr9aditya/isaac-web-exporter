@@ -82,8 +82,10 @@ the reusable `input_usd` exporter. `tools/factory_capture_experience.py` builds
 guided chapters from the actual run results. This adapter assumes the factory
 project is mounted read-only at `/project`, this repository at `/work`, and the
 factory's model service is available. It is an example of runtime integration,
-not an automatic recorder for arbitrary Isaac applications. Factory scene
-assets and generated packages are excluded from this public repository.
+not an automatic recorder for arbitrary Isaac applications. The
+[cheese-factory sample export](sample-exports/cheese-factory/README.md) includes
+the full visual browser package from the recorded 11-item camera/model run,
+with its matching screenshots and validation evidence.
 
 Set `mode: static` for an unanimated scene. `quality_preset: compact` is an
 opt-in, bounded simplification of linear transform keys. The standard preset

@@ -48,6 +48,10 @@ try {
     throw new Error('Robot hand did not move');
   if (JSON.stringify(result.checks.start.last) === JSON.stringify(result.checks.end.last))
     throw new Error('Last item did not move');
+  if (Math.abs(result.checks.start.hand[0] - 0.389) > 0.02 ||
+      Math.abs(result.checks.start.first[0] - 15) > 0.02 ||
+      Math.abs(result.checks.end.last[0] - 0.5) > 0.05)
+    throw new Error('Factory recording has an incorrect world-unit scale');
   await page.getByRole('button', { name: 'Guided demo' }).click();
   result.checks.guidedTitle = await page.locator('#tour-title').innerText();
   await page.getByRole('button', { name: 'Start', exact: true }).click();

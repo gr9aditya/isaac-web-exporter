@@ -1,0 +1,106 @@
+{
+  "url": "http://127.0.0.1:8005/",
+  "errors": [],
+  "external": [],
+  "checks": {
+    "start": {
+      "state": {
+        "clipIndex": 0,
+        "time": 0,
+        "duration": 72.78333282470703,
+        "playing": false,
+        "selectedId": null
+      },
+      "hand": [
+        0.3893575668334961,
+        0.4569441080093384,
+        -0.004672585520893437
+      ],
+      "first": [
+        15,
+        0,
+        0
+      ],
+      "last": [
+        25,
+        0,
+        0
+      ]
+    },
+    "middle": {
+      "state": {
+        "clipIndex": 0,
+        "time": 35,
+        "duration": 72.78333282470703,
+        "playing": false,
+        "selectedId": null
+      },
+      "hand": [
+        -0.0046945661306381226,
+        0.4291885793209075,
+        -0.5190622806549073
+      ],
+      "first": [
+        15,
+        0,
+        0
+      ],
+      "last": [
+        25,
+        0,
+        0
+      ]
+    },
+    "end": {
+      "state": {
+        "clipIndex": 0,
+        "time": 70,
+        "duration": 72.78333282470703,
+        "playing": false,
+        "selectedId": null
+      },
+      "hand": [
+        0.6692541837692261,
+        0.42559111118316645,
+        -0.32048603892326366
+      ],
+      "first": [
+        15,
+        0,
+        0
+      ],
+      "last": [
+        0.49999499320983887,
+        0.03000194206833851,
+        0.5233378410339355
+      ]
+    },
+    "chapters": 12,
+    "guidedTitle": "Item 11: not cheese",
+    "paused": {
+      "clipIndex": 0,
+      "time": 70.41719999998807,
+      "duration": 72.78333282470703,
+      "playing": false,
+      "selectedId": "/World/RecordedItems/Item010"
+    },
+    "restarted": {
+      "clipIndex": 0,
+      "time": 0.03340000003576279,
+      "duration": 72.78333282470703,
+      "playing": true,
+      "selectedId": "/World/RecordedItems/Item010"
+    },
+    "cameraBefore": [
+      4,
+      3.0000000000000004,
+      5
+    ],
+    "cameraAfter": [
+      1.0825014227355492,
+      3.8119124430055007,
+      5.9253208047869315
+    ]
+  },
+  "status": "PASS"
+}

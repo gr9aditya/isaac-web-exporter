@@ -10,10 +10,9 @@ The browser player embeds Three.js 0.185.0. Its MIT notice is shipped with
 every generated package. Player CSS and exporter code are repository source;
 no separate web fonts, decoder binaries, or CDN scripts are required.
 
-The cheese-factory source and stock Franka assets were used in private
-compatibility/performance probes and a full 11-item model-run export. The
-factory-specific adapter source is included here, but the project checkout,
-textures, recorded USD/GLB, and browser package remain under ignored `runs/`
-or on the isolated workstation. They are excluded from this public repository.
-The exact source repository/license terms must be reviewed by the owner before
-any third-party asset export is shared.
+The cheese-factory sample in `sample-exports/cheese-factory/` was generated
+from a recorded 11-item camera/model run. Its browser package includes the
+exported factory geometry, stock Franka geometry, and embedded source imagery.
+The user explicitly authorized redistribution of this export on 2026-09-24.
+The original project checkout, model weights, raw capture, and source USD are
+not part of the sample. The package includes the bundled Three.js MIT notice.
